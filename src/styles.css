@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+}
+.width100{
+    width: 100%;
+}
+.height100{
+    height: 100%;
+}
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
+.flex{
+    display: flex;
+}
+.alignLeft{
+    align-items: flex-start;
+}
+.alignRight{
+    align-items: flex-end;
+}
+.alignCneter{
+    align-items: center;
+}
+.justLeft{
+    justify-content: flex-start;
+}
+.justRight{
+    justify-content: flex-end;
+}
+.justCenter{
+    justify-content: center;
+}
+.justSA{
+    justify-content: space-around;
+}
+.justSE{
+    justify-content: space-evenly;
+}
+.justSB{
+    justify-content: space-between;
+}
