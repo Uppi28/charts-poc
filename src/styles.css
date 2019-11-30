@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html,body{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .width100{
     width: 100%;
@@ -16,6 +16,11 @@ html,body{
 .noPadding{
     padding: 0;
 }
+.tabContentWrapper{
+    margin-top: 51px;
+    padding: 1rem;
+    height: calc(100vh - 51px);
+}
 .flex{
     display: flex;
 }
@@ -25,7 +30,7 @@ html,body{
 .alignRight{
     align-items: flex-end;
 }
-.alignCneter{
+.alignCenter{
     align-items: center;
 }
 .justLeft{

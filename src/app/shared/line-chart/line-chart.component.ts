@@ -11,9 +11,7 @@ import { Color, Label } from 'ng2-charts';
 export class LineChartComponent {
 
   lineChartData: ChartDataSets[] = [
-    { data: [11, 0, 17, 19, 25, 70], label: 'Crude oil prices' },
-    { data: [95, 82, 88, 85, 87, 85], label: 'Crude oil prices' },
-    { data: [5, 72, 88, 95, 97, 85], label: 'Crude oil prices' },
+    { data: [85, 72, 78, 75, 77, 75], label: 'Crude oil prices' },
   ];
 
   lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
@@ -21,23 +19,18 @@ export class LineChartComponent {
   lineChartOptions = {
     responsive: true,
     scales: {
-      yAxes: [{
-        scaleLabel: {
-          display: true,
-          labelString: 'Price in $(MM)'
-        }
-      }],
       xAxes: [{
         scaleLabel: {
           display: true,
           labelString: 'Months'
         }
+      }],
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'Sales($MM)'
+        }
       }]
-    },
-    elements: {
-      line: {
-        fill: false
-      }
     }
   };
 

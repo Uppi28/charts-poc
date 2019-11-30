@@ -1,0 +1,8 @@
+.headerWrapper{
+    background: #00003c;
+    color: white;
+    padding: 0 1rem;
+    height: 52px;
+    position: fixed;
+    top: 0;
+}
