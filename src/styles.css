@@ -17,9 +17,10 @@ html,body{
     padding: 0;
 }
 .tabContentWrapper{
-    margin-top: 51px;
+    margin-top: 5rem;
     padding: 1rem;
-    height: calc(100vh - 51px);
+    height: calc(100vh - 5rem);
+    width: calc(100vw - 2rem);
 }
 .flex{
     display: flex;
@@ -50,4 +51,7 @@ html,body{
 }
 .justSB{
     justify-content: space-between;
+}
+.flexDirCol{
+    flex-direction: column;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartDataSets } from 'chart.js';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,7 +10,13 @@ export class PortfolioComponent implements OnInit {
 
   constructor() { }
 
+  barData: ChartDataSets[]
   ngOnInit() {
+    this.barData = [
+        { data: [85, 72, 78, 75, 77, 75], label: 'ABC', stack: 'a'},
+        { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', stack: 'a' },
+        { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a' },
+      ];
   }
 
 }

@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from '../app/app-routing.module';
 import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
 import { LineChartComponent } from './shared/line-chart/line-chart.component';
+import { DoughnutChartComponent } from "./shared/doughnut-chart/doughnut-chart.component";
 import { HomeComponent } from './home/home.component';
 import { RndComponent } from './rnd/rnd.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -19,11 +20,12 @@ import { CommercialComponent } from './commercial/commercial.component';
     HeaderComponent,
     BarChartComponent,
     LineChartComponent,
+    DoughnutChartComponent,
     HomeComponent,
     RndComponent,
     PortfolioComponent,
     LogisticsComponent,
-    CommercialComponent
+    CommercialComponent,
   ],
   imports: [
     BrowserModule,
