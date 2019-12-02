@@ -1,9 +1,19 @@
 <div class="tabContentWrapper">
-    <div class="chartWrapper">
-        <app-bar-chart 
-            [barData]="barData"
-            [barLabels]="barLabels"
-            [xLabel]="xLabel"
-            [yLabel]="yLabel"></app-bar-chart>
+    <div class="salesWow">
+        <app-line-chart [lineData]="lineChartData" [lineLabels]="lineChartLabels" [xLabel]="xLabel" [yLabel]="yLabel"
+            width="100%" height="100%">
+        </app-line-chart>
+    </div>
+    <div class="salesWow">
+        <app-bar-chart [barData]="barData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel"></app-bar-chart>
+    </div>
+    <div class="salesWow">
+        <app-line-chart [lineData]="lineChartDataMulti" [lineLabels]="lineChartLabelsMulti" [xLabel]="xLabel"
+            [yLabel]="yLabel" width="100%" height="100%">
+        </app-line-chart>
+    </div>
+    <div class="salesWow">
+        <app-bar-chart [barData]="barDataMulti" [barLabels]="barLabelsMulti" [xLabel]="xLabel" [yLabel]="yLabel">
+        </app-bar-chart>
     </div>
 </div>

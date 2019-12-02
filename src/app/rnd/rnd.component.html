@@ -1,9 +1,14 @@
 <div class="tabContentWrapper">
     <div class="chartWrapper">
-        <app-line-chart 
-            [lineData]="lineChartData"
-            [lineLabels]="lineChartLabels"
-            [xLabel]="xLabel"
-            [yLabel]="yLabel"></app-line-chart>
+        <app-bar-chart [barData]="barDataMulti" [barLabels]="barLabelsMulti" [xLabel]="xLabel" [yLabel]="yLabel">
+        </app-bar-chart>
+    </div>
+    <div class="chartWrapper">
+        <app-bar-chart [barData]="barDataMulti" [barLabels]="barLabelsMulti" [xLabel]="xLabel" [yLabel]="yLabel">
+        </app-bar-chart>
+    </div>
+    <div class="chartWrapper">
+        <app-bar-chart [barData]="barDataMulti" [barLabels]="barLabelsMulti" [xLabel]="xLabel" [yLabel]="yLabel">
+        </app-bar-chart>
     </div>
 </div>

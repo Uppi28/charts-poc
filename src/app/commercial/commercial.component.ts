@@ -12,6 +12,8 @@ export class CommercialComponent implements OnInit {
   constructor() { }
   barData: ChartDataSets[]
   barLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+  xLabel: string = 'Months';
+  yLabel: string = "Sales($MM)";
   ngOnInit() {
     this.barData = [
       { data: [85, 72, 78, 75, 107, 75], label: 'ABC', stack: 'a', type: 'line'},
@@ -22,5 +24,4 @@ export class CommercialComponent implements OnInit {
       { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a' },
     ];
   }
-
 }
