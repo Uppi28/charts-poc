@@ -10,43 +10,35 @@ import { Label } from 'ng2-charts';
 export class RndComponent implements OnInit {
 
   constructor() { }
-
-  lineChartDataMulti: ChartDataSets[];
-  lineChartData: ChartDataSets[];
-  barData: ChartDataSets[];
-  barDataMulti: ChartDataSets[];
-  lineChartLabelsMulti: Label[];
-  lineChartLabels: Label[];
-  barLabels: Label[];
-  barLabelsMulti: Label[];
+  ing1Data: ChartDataSets[];
+  ing1Label: Label[];
+  ing2Data: ChartDataSets[];
+  ing2Label: Label[];
+  priceCompData: ChartDataSets[];
+  priceCompLabel: Label[];
   xLabel: string;
   yLabel: string;
 
   ngOnInit() {
-    this.lineChartDataMulti = [
+    this.ing1Data = [
       { data: [85, 72, 78, 75, 77, 75], label: 'ABC' },
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ' },
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR' },
-    ];
-    this.lineChartData = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' }
-    ];
-    this.barData = [
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR'},
-    ];
-    this.barDataMulti = [
-      { data: [85, 72, 78, 75, 107, 75], label: 'ABC', stack: 'a', type: 'line'},
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a', type: 'line'},
-      { data: [35, 72, 48, 65, 90, 35], label: 'XYZ', stack: 'a', type: 'line'},
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC', stack: 'a'},
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', stack: 'a' },
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a' },
+      { data: [85, 72, 78, 75, 77, 75], label: 'XYZ', type: 'line'},
     ];
 
-    this.lineChartLabelsMulti = ['January', 'February', 'March', 'April', 'May', 'June'];
-    this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
-    this.barLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
-    this.barLabelsMulti = ['January', 'February', 'March', 'April', 'May', 'June'];
+    this.ing1Label = ['January', 'February', 'March', 'April', 'May', 'June'];
+
+    this.ing2Data = [
+      { data: [35, 72, 48, 65, 70, 35], label: 'ABC' },
+      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', type: 'line'},
+    ];
+
+    this.ing2Label = ['January', 'February', 'March', 'April', 'May', 'June'];
+
+    this.priceCompData = [
+      { data: [35, 72], label: 'ABC' }
+    ];
+
+    this.priceCompLabel = ['Ing 1', 'Ing 2'];
 
     this.xLabel = 'Months'
     this.yLabel = 'Sales($MM)'

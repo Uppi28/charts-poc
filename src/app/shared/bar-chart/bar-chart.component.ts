@@ -39,6 +39,9 @@ export class BarChartComponent implements OnInit {
           scaleLabel: {
             display: true,
             labelString: this.yLabel
+          },
+          ticks: {
+            beginAtZero: true
           }
         }]
       },
