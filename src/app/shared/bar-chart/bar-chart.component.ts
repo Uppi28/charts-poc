@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 
+
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
@@ -10,6 +11,7 @@ import { Label } from 'ng2-charts';
 
 export class BarChartComponent implements OnInit {
   @Input() barData: ChartDataSets[];
+  @Input() barLabels: Label[];
 
   barChartOptions: ChartOptions = {
     responsive: true,
@@ -20,13 +22,17 @@ export class BarChartComponent implements OnInit {
       }
     }
   };
-  barChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+  
   barChartType: ChartType = 'bar';
   barChartLegend = true;
   barChartPlugins = [];
-  barChartData: ChartDataSets[];
 
+  barChartData: ChartDataSets[];
+  barChartLabels: Label[];
+
+  
   ngOnInit() {
     this.barChartData = this.barData;
+    this.barChartLabels = this.barLabels
   }
 }

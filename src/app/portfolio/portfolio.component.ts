@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,6 +12,7 @@ export class PortfolioComponent implements OnInit {
   constructor() { }
 
   barData: ChartDataSets[]
+  barLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
   ngOnInit() {
     this.barData = [
         { data: [85, 72, 78, 75, 77, 75], label: 'ABC', stack: 'a'},
