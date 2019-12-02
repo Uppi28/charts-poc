@@ -1,5 +1,9 @@
 <div class="tabContentWrapper">
     <div class="chartWrapper">
-        <app-line-chart></app-line-chart>
+        <app-line-chart 
+            [lineData]="lineChartData"
+            [lineLabels]="lineChartLabels"
+            [xLabel]="xLabel"
+            [yLabel]="yLabel"></app-line-chart>
     </div>
 </div>

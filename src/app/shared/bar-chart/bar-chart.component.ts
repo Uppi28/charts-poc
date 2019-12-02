@@ -12,16 +12,10 @@ import { Label } from 'ng2-charts';
 export class BarChartComponent implements OnInit {
   @Input() barData: ChartDataSets[];
   @Input() barLabels: Label[];
+  @Input() xLabel: string;
+  @Input() yLabel: string;
 
-  barChartOptions: ChartOptions = {
-    responsive: true,
-    maintainAspectRatio:false,
-    elements: {
-      line: {
-        fill: false
-      }
-    }
-  };
+  barChartOptions: ChartOptions;
   
   barChartType: ChartType = 'bar';
   barChartLegend = true;
@@ -29,9 +23,32 @@ export class BarChartComponent implements OnInit {
 
   barChartData: ChartDataSets[];
   barChartLabels: Label[];
-
   
   ngOnInit() {
+    this.barChartOptions = {
+      responsive: true,
+      maintainAspectRatio:false,
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: this.xLabel
+          }
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: this.yLabel
+          }
+        }]
+      },
+      elements: {
+        line: {
+          fill: false
+        }
+      }
+    };
+
     this.barChartData = this.barData;
     this.barChartLabels = this.barLabels
   }

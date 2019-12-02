@@ -10,23 +10,28 @@ import { Color, Label } from 'ng2-charts';
 
 export class LineChartComponent implements OnInit{
 
-  @Input() lineChartData: ChartDataSets[];
-  @Input() lineChartLabels: Label[];
-  @Input() lineChartOptions: object;
-  @Input() lineChartColors: Color[];
-  @Input() lineChartLegend: boolean;
-  @Input() lineChartPlugins: [];
-  @Input() lineChartType: string;
+  @Input() lineData: ChartDataSets[];
+  @Input() lineLabels: Label[];
+  @Input() xLabel: string;
+  @Input() yLabel: string;
+
+  lineChartOptions: ChartOptions;
+  lineChartColors: Color[] = [
+    {
+      borderColor: 'black',
+      backgroundColor: 'rgba(255,255,0,0.28)',
+    },
+  ];
+
+  lineChartLegend = true;
+  lineChartPlugins = [];
+  lineChartType = 'line';
+  lineChartData: ChartDataSets[];
+  lineChartLabels: Label[];
 
   ngOnInit() {
-    this.lineChartData = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' },
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ' },
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR' },
-    ];
-
-    this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
-
+    this.lineChartData = this.lineData;
+    this.lineChartLabels = this.lineLabels;
     this.lineChartOptions = {
       responsive: true,
       maintainAspectRatio: false,
@@ -34,13 +39,13 @@ export class LineChartComponent implements OnInit{
         xAxes: [{
           scaleLabel: {
             display: true,
-            labelString: 'Months'
+            labelString: this.xLabel
           }
         }],
         yAxes: [{
           scaleLabel: {
             display: true,
-            labelString: 'Sales($MM)'
+            labelString: this.yLabel
           }
         }]
       },
@@ -50,16 +55,5 @@ export class LineChartComponent implements OnInit{
         }
       }
     };
-
-    this.lineChartColors = [
-      {
-        borderColor: 'black',
-        backgroundColor: 'rgba(255,255,0,0.28)',
-      },
-    ];
-
-    this.lineChartLegend = true;
-    this.lineChartPlugins = [];
-    this.lineChartType = 'line';
   }
 }
