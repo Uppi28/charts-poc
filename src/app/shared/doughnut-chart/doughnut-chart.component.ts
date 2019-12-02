@@ -13,9 +13,9 @@ export class DoughnutChartComponent {
     responsive: true,
     maintainAspectRatio: false,
   }
-  doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla'];
+  doughnutChartLabels: Label[] = ['Mars', 'Suppliers'];
   doughnutChartData: MultiDataSet = [
-    [55, 25, 20]
+    [55, 25]
   ];
   doughnutChartType: ChartType = 'doughnut';
 
