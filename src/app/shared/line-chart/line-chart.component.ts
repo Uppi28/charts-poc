@@ -29,6 +29,7 @@ export class LineChartComponent implements OnInit{
 
     this.lineChartOptions = {
       responsive: true,
+      maintainAspectRatio: false,
       scales: {
         xAxes: [{
           scaleLabel: {

@@ -9,7 +9,10 @@ import { MultiDataSet, Label } from 'ng2-charts';
 })
 
 export class DoughnutChartComponent {
-
+  doughnutOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  }
   doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla'];
   doughnutChartData: MultiDataSet = [
     [55, 25, 20]

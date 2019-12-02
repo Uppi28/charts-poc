@@ -13,6 +13,7 @@ export class BarChartComponent implements OnInit {
 
   barChartOptions: ChartOptions = {
     responsive: true,
+    maintainAspectRatio:false,
     elements: {
       line: {
         fill: false
