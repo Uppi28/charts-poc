@@ -1,9 +1,10 @@
-<div class="tabContentWrapper">
+<div class="tabContentWrapper flex alignCenter justSE">
     <div class="chartWrapper">
-        <app-bar-chart
-            [barData]="barData"
-            [barLabels]="barLabels"
-            [xLabel]="xLabel"
-            [yLabel]="yLabel"></app-bar-chart>
+        <app-bar-chart [barData]="ingData" [barLabels]="ingLabel" [xLabel]="xLabel" [yLabel]="yLabel"></app-bar-chart>
+    </div>
+    <div class="chartWrapper">
+        <app-line-chart [lineData]="lineChartData" [lineLabels]="lineChartLabel" [xLabel]="xLabel" [yLabel]="yLabel"
+            width="100%" height="100%">
+        </app-line-chart>
     </div>
 </div>

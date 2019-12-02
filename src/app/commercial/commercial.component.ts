@@ -10,18 +10,22 @@ import { Label } from 'ng2-charts';
 export class CommercialComponent implements OnInit {
 
   constructor() { }
-  barData: ChartDataSets[]
-  barLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+  ingData: ChartDataSets[]
+  ingLabel: Label[] = ['Ingredients'];
+  lineChartData: ChartDataSets[]
+  lineChartLabel: Label[] = ['Ingredients'];
   xLabel: string = 'Months';
   yLabel: string = "Sales($MM)";
   ngOnInit() {
-    this.barData = [
-      { data: [85, 72, 78, 75, 107, 75], label: 'ABC', stack: 'a', type: 'line'},
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a', type: 'line'},
-      { data: [35, 72, 48, 65, 90, 35], label: 'XYZ', stack: 'a', type: 'line'},
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC', stack: 'a'},
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', stack: 'a' },
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a' },
+    this.ingData = [
+      { data: [85], label: 'Ing 1', stack: 'a'},
+      { data: [65], label: 'Ing 2', stack: 'b' },
+      { data: [95], label: 'Ing 3', stack: 'c' },
     ];
+
+    this.lineChartData = [
+      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' }
+    ];
+    this.lineChartLabel = ['January', 'February', 'March', 'April', 'May', 'June'];
   }
 }
