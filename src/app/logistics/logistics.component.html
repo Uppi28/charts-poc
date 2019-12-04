@@ -1,13 +1,16 @@
 <div class="tabContentWrapper">
+    <app-filters></app-filters>
     <div class="chartWrapper" style="width: 100%;">
-        <app-bar-chart [barData]="splitCostData" [barLabels]="splitCostLabel" [xLabel]="'Freights'" [yLabel]="'Cost($MM)'">
+        <app-bar-chart [barData]="splitCostData" [barLabels]="splitCostLabel" [xLabel]="'Freights'"
+            [yLabel]="'Cost($MM)'">
         </app-bar-chart>
     </div>
     <div class="chartWrapper">
         <app-doughnut-chart></app-doughnut-chart>
     </div>
     <div class="chartWrapper">
-        <app-bar-chart [barData]="marsVsuppBarData" [barLabels]="marsVsuppBarLabel" [xLabel]="'Cost Split'" [yLabel]="'Cost($MM)'">
+        <app-bar-chart [barData]="marsVsuppBarData" [barLabels]="marsVsuppBarLabel" [xLabel]="'Cost Split'"
+            [yLabel]="'Cost($MM)'">
         </app-bar-chart>
     </div>
 </div>

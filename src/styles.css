@@ -18,8 +18,8 @@ html,body{
 }
 .tabContentWrapper{
     margin-top: 5rem;
-    padding: 1rem;
-    height: calc(100vh - 5rem);
+    padding: 3rem 1rem 0 1rem;
+    height: calc(100vh - 6rem);
     width: calc(100vw - 2rem);
 }
 .chart-wrapper{
@@ -59,3 +59,5 @@ html,body{
 .flexDirCol{
     flex-direction: column;
 }
+html, body { height: 91vh; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

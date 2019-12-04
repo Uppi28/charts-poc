@@ -1,0 +1,16 @@
+.filterIcon{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+}
+.filterContent{
+    height: 100%;
+    width: 25rem;
+    background: white;
+    float: left;
+    position: fixed;
+    box-shadow: 5px 10px 20px grey;
+    top: 5rem;
+    left: 0;
+    padding: 1rem;
+}
