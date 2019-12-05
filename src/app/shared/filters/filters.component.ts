@@ -14,9 +14,13 @@ export class FiltersComponent implements OnInit {
   toggleFilters() {
     this.filtersOpen = !this.filtersOpen
   }
+
+  selectionDone(event){
+    console.log(event); 
+  }
   
   ngOnInit() {
-  
+    
   }
 
 }

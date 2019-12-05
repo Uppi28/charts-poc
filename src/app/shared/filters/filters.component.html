@@ -3,6 +3,38 @@
         <mat-icon>format_align_justify</mat-icon>
     </mat-button-toggle>
 </div>
-<div class="filterContent" [hidden]="!filtersOpen" (click)="toggleFilters()">
-    <div class="col-12">Filters</div>
+<div class="filterContent" [hidden]="!filtersOpen">
+    <div class="col-12 flex alignCenter justSB filterHeader">
+        <div>Filters</div>
+        <div class="flex alignCenter justCenter pointer" (click)="toggleFilters()">
+            <i class="material-icons">clear</i>
+        </div>
+    </div>
+    <div class="col-12" class="filterBody">
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["Category1A", "Category1B", "Category1C", "Category1D", "Category1E", "Category1F"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 1'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["Category2A", "Category2B", "Category2C", "Category2D", "Category2E", "Category2F"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 2'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["Category3A", "Category3B", "Category3C", "Category3D", "Category3E", "Category3F"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 3'">
+            </app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["Category4A", "Category4B", "Category4C", "Category4D", "Category4E", "Category4F"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 4'"></app-multi-select>
+        </div>
+    </div>
 </div>

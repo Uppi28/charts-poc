@@ -16,6 +16,8 @@ import { LogisticsComponent } from './logistics/logistics.component';
 import { CommercialComponent } from './commercial/commercial.component';
 import { FiltersComponent } from './shared/filters/filters.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MultiSelectComponent } from './shared/multi-select/multi-select.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LogisticsComponent,
     CommercialComponent,
     FiltersComponent,
+    MultiSelectComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
-    MatIconModule 
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

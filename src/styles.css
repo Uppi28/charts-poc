@@ -56,6 +56,9 @@ html,body{
 .justSB{
     justify-content: space-between;
 }
+.pointer{
+    cursor: pointer;
+}
 .flexDirCol{
     flex-direction: column;
 }
