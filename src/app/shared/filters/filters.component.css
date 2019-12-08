@@ -1,17 +1,12 @@
-.filterIcon{
-    position: absolute;
-    top: 5rem;
-    left: 0;
-}
 .filterContent{
     height: 100%;
-    width: 25rem;
     background: white;
-    float: left;
-    position: fixed;
-    box-shadow: 5px 10px 20px grey;
-    top: 5rem;
-    left: 0;
+    border-right: 1px solid grey;
+    width: calc(100% - 1px);
+}
+button:focus, button:active:focus, button.active:focus {
+    outline: none !important;
+    outline-style: none !important;
 }
 .filterHeader{
     background: #000092;
@@ -21,6 +16,7 @@
 }
 .filterBody{
     padding: 1rem;
+    color: black;
 }
 .filterSectionHolder{
     margin-bottom: 1rem;

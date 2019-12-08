@@ -23,6 +23,12 @@ export class BarChartComponent implements OnInit {
 
   barChartData: ChartDataSets[];
   barChartLabels: Label[];
+
+  clicked(event){
+    console.log(event.active[0]['_chart'].config.data);
+    console.log(event.active[0]['_index']);
+    
+  }
   
   ngOnInit() {
     this.barChartOptions = {

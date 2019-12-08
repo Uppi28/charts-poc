@@ -6,6 +6,7 @@
     [plugins]="barChartPlugins"
     [legend]="barChartLegend"
     [chartType]="barChartType"
-    [colors]="chartColors">
+    [colors]="chartColors"
+    (chartClick)="clicked($event)">
   </canvas>
 </div>

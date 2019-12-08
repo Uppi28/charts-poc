@@ -1,9 +1,4 @@
-<div class="filterIcon" *ngIf="!filtersOpen" (click)="toggleFilters()">
-    <mat-button-toggle value="justify" aria-label="Open filters">
-        <mat-icon>format_align_justify</mat-icon>
-    </mat-button-toggle>
-</div>
-<div class="filterContent" [hidden]="!filtersOpen">
+<div class="filterContent">
     <div class="col-12 flex alignCenter justSB filterHeader">
         <div>Filters</div>
         <div class="flex alignCenter justCenter pointer" (click)="toggleFilters()">
@@ -13,28 +8,46 @@
     <div class="col-12" class="filterBody">
         <div class="filterSectionHolder">
             <app-multi-select
-                [data]='["Category1A", "Category1B", "Category1C", "Category1D", "Category1E", "Category1F"]'
+                [data]='["Segment1", "Segment2", "Segment3", "Segment4", "Segment5", "Segment6"]'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
-                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 1'"></app-multi-select>
+                (optionSelected)="selectionDone($event)" [filterFor]="'Segment'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
             <app-multi-select
-                [data]='["Category2A", "Category2B", "Category2C", "Category2D", "Category2E", "Category2F"]'
+                [data]='["RegionA", "RegionB", "RegionC", "RegionD", "RegionE", "RegionF"]'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
-                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 2'"></app-multi-select>
+                (optionSelected)="selectionDone($event)" [filterFor]="'Region'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
             <app-multi-select
-                [data]='["Category3A", "Category3B", "Category3C", "Category3D", "Category3E", "Category3F"]'
+                [data]='["PlantA", "PlantB", "PlantC", "PlantD", "PlantE", "PlantF"]'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
-                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 3'">
+                (optionSelected)="selectionDone($event)" [filterFor]="'Plant'">
             </app-multi-select>
         </div>
         <div class="filterSectionHolder">
             <app-multi-select
-                [data]='["Category4A", "Category4B", "Category4C", "Category4D", "Category4E", "Category4F"]'
+                [data]='["CategoryA", "CategoryB", "CategoryC", "CategoryD", "CategoryE", "CategoryF"]'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
-                (optionSelected)="selectionDone($event)" [filterFor]="'Filter Cat 4'"></app-multi-select>
+                (optionSelected)="selectionDone($event)" [filterFor]="'Category'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["BrandA", "BrandB", "BrandC", "BrandD", "BrandE", "BrandF"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Brand'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["Pack Type A", "Pack Type B", "Pack Type C", "Pack Type D", "Pack Type E", "Pack Type F"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Pack Type'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select
+                [data]='["SKUA", "SKUB", "SKUC", "SKUD", "SKUE", "SKUF"]'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'SKU'"></app-multi-select>
         </div>
     </div>
 </div>

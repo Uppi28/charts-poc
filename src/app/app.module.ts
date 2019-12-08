@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from "ng2-charts";
-import { MatButtonToggleModule, MatIconModule } from "@angular/material";
+import { MatButtonModule, MatIconModule } from "@angular/material";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -39,7 +39,7 @@ import { FormsModule } from '@angular/forms';
     ChartsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule,
+    MatButtonModule,
     MatIconModule,
     FormsModule
   ],
