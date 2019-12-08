@@ -10,43 +10,40 @@ import { Label } from 'ng2-charts';
 export class PortfolioComponent implements OnInit {
 
   constructor() { }
-
-  lineChartDataMulti: ChartDataSets[];
   lineChartData: ChartDataSets[];
-  barData: ChartDataSets[];
-  barDataMulti: ChartDataSets[];
-  lineChartLabelsMulti: Label[];
+  volBarData: ChartDataSets[];
+  salesBarData: ChartDataSets[];
+  cogsBarData: ChartDataSets[];
+  volLineData: ChartDataSets[];
+  salesLineData: ChartDataSets[];
+  cogsLineData: ChartDataSets[];
   lineChartLabels: Label[];
   barLabels: Label[];
-  barLabelsMulti: Label[];
   xLabel: string;
   yLabel: string;
 
   ngOnInit() {
-    this.lineChartDataMulti = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' },
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ' },
+    this.volBarData = [
       { data: [25, 32, 68, 65, 57, 45], label: 'PQR' },
     ];
-    this.lineChartData = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' }
+    this.salesBarData = [
+      { data: [2, 50, 30, 5, 27, 45], label: 'PQR' },
     ];
-    this.barData = [
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR'},
+    this.cogsBarData = [
+      { data: [90, 80, 70, 60, 50, 40], label: 'PQR' },
     ];
-    this.barDataMulti = [
-      { data: [85, 72, 78, 75, 107, 75], label: 'ABC', stack: 'a', type: 'line'},
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a', type: 'line'},
-      { data: [35, 72, 48, 65, 90, 35], label: 'XYZ', stack: 'a', type: 'line'},
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC', stack: 'a'},
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', stack: 'a' },
-      { data: [25, 32, 68, 65, 57, 45], label: 'PQR', stack: 'a' },
+    this.volLineData = [
+      { data: [25, 32, 68, 65, 57, 45], label: 'PQR' },
+    ];
+    this.salesLineData = [
+      { data: [2, 50, 30, 5, 27, 45], label: 'PQR' },
+    ];
+    this.cogsLineData = [
+      { data: [90, 80, 70, 60, 50, 40], label: 'PQR' },
     ];
 
-    this.lineChartLabelsMulti = ['January', 'February', 'March', 'April', 'May', 'June'];
     this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
     this.barLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
-    this.barLabelsMulti = ['January', 'February', 'March', 'April', 'May', 'June'];
 
     this.xLabel = 'Months'
     this.yLabel = 'Sales($MM)'

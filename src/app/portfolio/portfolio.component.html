@@ -7,25 +7,57 @@
             Product Performance
         </div>
         <div class="chartsWrapper">
-            <div class="salesWow">
-                <app-line-chart [lineData]="lineChartData" [lineLabels]="lineChartLabels" [xLabel]="xLabel"
-                    [yLabel]="yLabel" width="100%" height="100%">
-                </app-line-chart>
-            </div>
-            <div class="salesWow">
-                <app-bar-chart [barData]="barData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel">
-                </app-bar-chart>
-            </div>
-            <div class="salesWow">
-                <app-line-chart [lineData]="lineChartDataMulti" [lineLabels]="lineChartLabelsMulti" [xLabel]="xLabel"
-                    [yLabel]="yLabel" width="100%" height="100%">
-                </app-line-chart>
-            </div>
-            <div class="salesWow">
-                <app-bar-chart [barData]="barDataMulti" [barLabels]="barLabelsMulti" [xLabel]="xLabel"
-                    [yLabel]="yLabel">
-                </app-bar-chart>
-            </div>
+            <mat-tab-group>
+                <mat-tab label="Volume">
+                    <div class="salesWow">
+                        <app-bar-chart [barData]="volBarData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel" [chartColor]="'#D90368'">
+                        </app-bar-chart>
+                    </div>
+                    <div class="salesWow">
+                        <app-line-chart [lineData]="volLineData" [lineLabels]="lineChartLabels" [xLabel]="xLabel"
+                            [yLabel]="yLabel" width="100%" height="100%" [chartColor]="'#D90368'">
+                        </app-line-chart>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Sales">
+                    <div class="salesWow">
+                        <app-bar-chart [barData]="salesBarData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel" [chartColor]="'#820263'">
+                        </app-bar-chart>
+                    </div>
+                    <div class="salesWow">
+                        <app-line-chart [lineData]="salesLineData" [lineLabels]="lineChartLabels" [xLabel]="xLabel"
+                            [yLabel]="yLabel" width="100%" height="100%" [chartColor]="'#820263'">
+                        </app-line-chart>
+                    </div>
+                </mat-tab>
+                <mat-tab label="COGS">
+                    <div class="salesWow">
+                        <app-bar-chart [barData]="cogsBarData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                        </app-bar-chart>
+                    </div>
+                    <div class="salesWow">
+                        <app-line-chart [lineData]="cogsLineData" [lineLabels]="lineChartLabels" [xLabel]="xLabel"
+                            [yLabel]="yLabel" width="100%" height="100%" [chartColor]="'#04A777'">
+                        </app-line-chart>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+            <mat-card>Market Performance</mat-card>
+            <mat-tab-group>
+                <mat-tab label="Volume">
+                    <div class="salesWow">
+                        <app-bar-chart [barData]="cogsBarData" [barLabels]="barLabels" [xLabel]="xLabel" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                        </app-bar-chart>
+                    </div>
+                    <div class="salesWow">
+                        <app-line-chart [lineData]="cogsLineData" [lineLabels]="lineChartLabels" [xLabel]="xLabel"
+                            [yLabel]="yLabel" width="100%" height="100%" [chartColor]="'#04A777'">
+                        </app-line-chart>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Sales"> Content 2 </mat-tab>
+                <mat-tab label="COGS"> Content 3 </mat-tab>
+            </mat-tab-group>
         </div>
     </div>
 </div>

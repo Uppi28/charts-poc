@@ -1,6 +1,6 @@
 .salesWow{
     width: 50%;
-    height: 49%;
+    height: 100%;
     float: left;
     padding: 1rem;
 }
@@ -23,4 +23,7 @@
     width: 80%;
     height: calc(100% - 5rem);
     float: left;
+}
+:host ::ng-deep .mat-tab-body-wrapper {
+    height: 300px;
 }

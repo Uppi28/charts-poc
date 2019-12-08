@@ -14,14 +14,10 @@ export class LineChartComponent implements OnInit{
   @Input() lineLabels: Label[];
   @Input() xLabel: string;
   @Input() yLabel: string;
+  @Input() chartColor: string;
 
   lineChartOptions: ChartOptions;
-  lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,255,0,0.28)',
-    },
-  ];
+  lineChartColors: Color[];
 
   lineChartLegend = true;
   lineChartPlugins = [];
@@ -55,5 +51,15 @@ export class LineChartComponent implements OnInit{
         }
       }
     };
+    this.lineChartColors = [
+      { // red
+        backgroundColor: this.chartColor,
+        borderColor: this.chartColor,
+        pointBackgroundColor: 'rgba(148,159,177,1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      },
+    ];
   }
 }
