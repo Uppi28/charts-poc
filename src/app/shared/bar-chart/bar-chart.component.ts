@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 
@@ -15,6 +15,8 @@ export class BarChartComponent implements OnInit {
   @Input() xLabel: string;
   @Input() yLabel: string;
   @Input() chartColor: string;
+  @Input() chartName: string;
+  @Output() clicked = new EventEmitter<object>();
 
   barChartOptions: ChartOptions;
 
@@ -26,14 +28,11 @@ export class BarChartComponent implements OnInit {
   barChartLabels: Label[];
   public barChartColors: Color[];
 
-  clicked(event) {
-    console.log(event.active[0]['_chart'].config.data);
-    console.log(event.active[0]['_index']);
-
+  barClicked(event) {
+    this.clicked.emit({index: event.active[0]['_index'], chartName: this.chartName});
   }
 
   ngOnInit() {
-    console.log(this.chartColor);
     this.barChartColors = [
       { // red
         backgroundColor: this.chartColor,

@@ -27,3 +27,9 @@
 :host ::ng-deep .mat-tab-body-wrapper {
     height: 300px;
 }
+.donutHolder{
+    width: 30%;
+}
+.multiChartHolder{
+    width: 70%;
+}

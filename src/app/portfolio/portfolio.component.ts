@@ -17,10 +17,36 @@ export class PortfolioComponent implements OnInit {
   volLineData: ChartDataSets[];
   salesLineData: ChartDataSets[];
   cogsLineData: ChartDataSets[];
+  mktPerfBarData: ChartDataSets[];
   lineChartLabels: Label[];
   barLabels: Label[];
   xLabel: string;
   yLabel: string;
+  hardCodedData: number[][] = [
+    [25, 32, 68, 65, 57, 45],
+    [53, 82, 78, 46, 37, 95],
+    [15, 72, 28, 35, 27, 15],
+    [5, 72, 68, 95, 57, 15],
+    [55, 32, 78, 15, 7, 5],
+    [95, 82, 8, 15, 45, 53]
+  ];
+
+  barClicked(data: { index: number, chartName: string }) {
+    let tempObj = {};
+    switch (data.chartName) {
+      case 'ppVol':
+        this.volLineData[0]['data'] = this.hardCodedData[data.index];
+        break;
+      case 'ppSales':
+        this.salesLineData[0]['data'] = this.hardCodedData[data.index];
+        break;
+      case 'ppCogs':
+        this.cogsLineData[0]['data'] = this.hardCodedData[data.index];
+        break;
+      default:
+        break;
+    }
+  }
 
   ngOnInit() {
     this.volBarData = [
@@ -30,7 +56,7 @@ export class PortfolioComponent implements OnInit {
       { data: [2, 50, 30, 5, 27, 45], label: 'PQR' },
     ];
     this.cogsBarData = [
-      { data: [90, 80, 70, 60, 50, 40], label: 'PQR' },
+      { data: [10, 34, 45, 3, 76, 40], label: 'PQR' },
     ];
     this.volLineData = [
       { data: [25, 32, 68, 65, 57, 45], label: 'PQR' },
@@ -39,7 +65,12 @@ export class PortfolioComponent implements OnInit {
       { data: [2, 50, 30, 5, 27, 45], label: 'PQR' },
     ];
     this.cogsLineData = [
-      { data: [90, 80, 70, 60, 50, 40], label: 'PQR' },
+      { data: [10, 34, 45, 3, 76, 40], label: 'PQR' },
+    ];
+    this.mktPerfBarData = [
+      { data: [1, 3, 5, 3, 7, 0], label: 'PQR', type: 'line' },
+      { data: [2, -2, 6, -5, 7, 4], label: 'ABC', type: 'line' },
+      { data: [1, 3, -5, 2, 7, 4], label: 'PQR' },
     ];
 
     this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
