@@ -13,7 +13,7 @@ export class DoughnutChartComponent {
     responsive: true,
     maintainAspectRatio: false,
   }
-  doughnutChartLabels: Label[] = ['Mars', 'Suppliers'];
+  doughnutChartLabels: Label[] = ['Mars', 'Competitors'];
   doughnutChartData: MultiDataSet = [
     [55, 25]
   ];

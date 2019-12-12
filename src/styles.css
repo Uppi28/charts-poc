@@ -61,4 +61,9 @@ html,body{
 .flexDirCol{
     flex-direction: column;
 }
+.filterWrapper{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

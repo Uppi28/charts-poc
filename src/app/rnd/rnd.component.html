@@ -1,15 +1,20 @@
 <div class="tabContentWrapper">
-    <app-filters></app-filters>
-    <div class="chartWrapper">
-        <app-bar-chart [barData]="ing1Data" [barLabels]="ing1Label" [xLabel]="xLabel" [yLabel]="yLabel">
-        </app-bar-chart>
+    <div class="noPadding filterWrapper">
+        <app-filters></app-filters>
     </div>
-    <div class="chartWrapper">
-        <app-bar-chart [barData]="ing2Data" [barLabels]="ing2Label" [xLabel]="xLabel" [yLabel]="yLabel">
-        </app-bar-chart>
-    </div>
-    <div class="chartWrapper">
-        <app-bar-chart [barData]="priceCompData" [barLabels]="priceCompLabel" [xLabel]="xLabel" [yLabel]="yLabel">
-        </app-bar-chart>
+    <div class="tabBody">
+        <div class="tabTitle flex alignCenter justCenter">
+            Product Performance
+        </div>
+        <div class="chartsWrapper">
+            <mat-tab-group>
+                <mat-tab label="Volume">
+                    <div class="salesWow"></div>
+                </mat-tab>
+            </mat-tab-group>
+            <div id="d3chart">
+                
+            </div>
+        </div>
     </div>
 </div>
