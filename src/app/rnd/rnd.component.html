@@ -4,16 +4,48 @@
     </div>
     <div class="tabBody">
         <div class="tabTitle flex alignCenter justCenter">
-            Product Performance
+            Research and Development
         </div>
         <div class="chartsWrapper">
-            <mat-tab-group>
-                <mat-tab label="Volume">
-                    <div class="salesWow"></div>
-                </mat-tab>
-            </mat-tab-group>
-            <div id="d3chart">
-                
+            <div class="height100 width50 pullLeft">
+                <div class="chartWrapper" style="width: 100%;">
+                    <app-doughnut-chart [donutData]="donutData" [donutLabels]="donutLabels"
+                        (clicked)="donutClicked($event)" [chartName]="'abc'"></app-doughnut-chart>
+                    <div class="flex alignCenter justCenter">Original recipe Composition</div>
+                </div>
+                <div class="chartWrapper" style="overflow: auto; width: 100%;">
+                    <mat-card style="background: gray; color: white;">
+                        Alternate Ingredients' List <span> For: Ing {{altIngindex + 1}}</span>
+                    </mat-card>
+                    <div *ngFor="let alt of altIngs">
+                        <mat-card style="background: lightgray;">{{alt}}</mat-card>
+                    </div>
+                </div>
+            </div>
+            <div class="chartWrapper" style="height: 100%;">
+                <mat-card style="background: gray; color: white;">Cost Simulator</mat-card>
+                <div style="height: 75%; overflow: auto;">
+                    <mat-card class="alignCenter justSB" style="display: flex;"
+                        *ngFor="let altIngs of altIngsAll; let i = index; trackBy: trackByIndex">
+                        <span>Ing {{i}} </span>
+                        <i class="material-icons">repeat</i>
+                        <mat-form-field>
+                            <mat-label>Select alternate Ingredient</mat-label>
+                            <mat-select>
+                                <mat-option
+                                    *ngFor="let altIng of altIngsAll[i]; let index = index; trackBy: trackByIndex"
+                                    [value]="altIngsAll[i][index]">
+                                    {{altIngsAll[i][index]}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-card>
+                </div>
+                <mat-card class="flex alignCenter justSB" style="display: flex; background: lightgray;">
+                    <button mat-raised-button color="primary" (click)="calcUpdatedCost()"> Generate updated
+                        cost</button>
+                    <div>{{updatedCost}}</div>
+                </mat-card>
             </div>
         </div>
     </div>

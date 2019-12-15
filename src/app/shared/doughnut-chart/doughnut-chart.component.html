@@ -3,6 +3,7 @@
     [data]="doughnutChartData"
     [labels]="doughnutChartLabels"
     [chartType]="doughnutChartType"
-    [options]="doughnutOptions">
+    [options]="doughnutOptions"
+    (chartClick)="donutClicked($event)">
   </canvas>
 </div>

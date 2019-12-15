@@ -11,6 +11,7 @@
 }
 .material-icons{
     font-size: 40px;
+    cursor: pointer;
 }
 .material-icons:focus{
     outline: 0
