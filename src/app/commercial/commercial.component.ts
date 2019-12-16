@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-commercial',
@@ -15,12 +16,20 @@ export class CommercialComponent implements OnInit {
 
   xLabel: string = 'Composition';
   yLabel: string = 'Cost(%)';
-
+  trendLineData: ChartDataSets[];
+  trendLineLabels: Label[]
+  
   donutClicked(event) {
     console.log(event);
   }
+  
 
   ngOnInit() {
+    this.trendLineData = [
+      { data: [95, 29, 89, 15, 57, 5], label: 'XYZ' },
+    ];
+    this.trendLineLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
+
     this.donutData = [1,2,3,4,5];
     this.donutLabels = ['Ing 1 ','Ing 2','Ing 3','Ing 4','Ing 5']
 
