@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
-import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-commercial',
@@ -10,22 +9,36 @@ import { Label } from 'ng2-charts';
 export class CommercialComponent implements OnInit {
 
   constructor() { }
-  ingData: ChartDataSets[]
-  ingLabel: Label[] = ['Ingredients'];
-  lineChartData: ChartDataSets[]
-  lineChartLabel: Label[] = ['Ingredients'];
-  xLabel: string = 'Months';
-  yLabel: string = "Sales($MM)";
-  ngOnInit() {
-    this.ingData = [
-      { data: [85], label: 'Ing 1', stack: 'a'},
-      { data: [65], label: 'Ing 2', stack: 'b' },
-      { data: [95], label: 'Ing 3', stack: 'c' },
-    ];
+  donutData
+  donutLabels
+  bubbleData: ChartDataSets[];
 
-    this.lineChartData = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' }
-    ];
-    this.lineChartLabel = ['January', 'February', 'March', 'April', 'May', 'June'];
+  xLabel: string = 'Composition';
+  yLabel: string = 'Cost(%)';
+
+  donutClicked(event) {
+    console.log(event);
   }
+
+  ngOnInit() {
+    this.donutData = [1,2,3,4,5];
+    this.donutLabels = ['Ing 1 ','Ing 2','Ing 3','Ing 4','Ing 5']
+
+    this.bubbleData = [
+      {
+        data: [
+          { x: 10, y: 10, r: 10 },
+          { x: 15, y: 5, r: 15 },
+          { x: 24, y: 12, r: 23 },
+          { x: 7, y: 8, r: 8 },
+        ],
+        label: 'Series A',
+        backgroundColor: 'green',
+        borderColor: 'blue',
+        hoverBackgroundColor: 'purple',
+        hoverBorderColor: 'red',
+      },
+    ];
+  }
+  
 }

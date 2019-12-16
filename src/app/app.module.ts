@@ -18,6 +18,7 @@ import { FiltersComponent } from './shared/filters/filters.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MultiSelectComponent } from './shared/multi-select/multi-select.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BubbleChartComponent } from './shared/bubble-chart/bubble-chart.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommercialComponent,
     FiltersComponent,
     MultiSelectComponent,
+    BubbleChartComponent,
   ],
   imports: [
     BrowserModule,
