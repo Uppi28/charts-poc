@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from "ng2-charts";
 import { MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatSelectModule } from "@angular/material";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+import { environment } from "../environments/environment";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -47,7 +51,9 @@ import { BubbleChartComponent } from './shared/bubble-chart/bubble-chart.compone
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
