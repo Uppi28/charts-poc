@@ -1,16 +1,17 @@
 <div class="tabContentWrapper">
-    <app-filters></app-filters>
-    <div class="chartWrapper" style="width: 100%;">
-        <app-bar-chart [barData]="splitCostData" [barLabels]="splitCostLabel" [xLabel]="'Freights'"
-            [yLabel]="'Cost($MM)'">
-        </app-bar-chart>
+    <div class="noPadding filterWrapper">
+        <app-filters></app-filters>
     </div>
-    <div class="chartWrapper">
-        <app-doughnut-chart></app-doughnut-chart>
-    </div>
-    <div class="chartWrapper">
-        <app-bar-chart [barData]="marsVsuppBarData" [barLabels]="marsVsuppBarLabel" [xLabel]="'Cost Split'"
-            [yLabel]="'Cost($MM)'">
-        </app-bar-chart>
+    <div class="tabBody">
+        <div class="tabTitle flex alignCenter justCenter">
+            Inbound Logistics
+        </div>
+        <div class="chartsWrapper flex alignCenter justCenter">
+            <div class="chartWrapper multiChartHolder" style="width: 70%; height: 70%;">
+                <app-bar-chart [barData]="logisticsMulti" [barLabels]="logisticsMultiLabels" [xLabel]="xLabel" [yLabel]="yLabel"
+                    [chartColor]="'#04A777'">
+                </app-bar-chart>
+            </div>
+        </div>
     </div>
 </div>

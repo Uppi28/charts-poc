@@ -10,17 +10,19 @@ import { Label } from 'ng2-charts';
 export class LogisticsComponent implements OnInit {
 
   constructor() { }
-  splitCostData: ChartDataSets[];
-  splitCostLabel: Label[] = ['Freight 1','Freight 2','Freight 3','Freight 4','Freight 5',];
-  marsVsuppBarData: ChartDataSets[];
-  marsVsuppBarLabel: Label[] = ['Mars', 'Supplier']
+  logisticsMulti: ChartDataSets[];
+  logisticsMultiLabels: Label[];
+  xLabel: string = "Periods";
+  yLabel: string = "Tonnes"
+  
   ngOnInit() {
-    this.splitCostData = [
-      { data: [85, 75, 66, 88, 99], label: 'Cost', stack: 'a'},
+    this.logisticsMulti = [
+      { data: [900000, 70000, 734356, 234568, 113456], label: 'Demand Plan', type: 'line' },
+      { data: [50000, 50000, 50000, 50000, 50000], label: 'Physical', stack: 'a' },
+      { data: [72345, 45678, 12345, 45678, 76544], label: 'Safety Stock', stack: 'a' },
+      { data: [45672, 56789, 67899, 87654, 73456], label: 'In-Transit', stack: 'a' },
     ];
-    this.marsVsuppBarData = [
-      { data: [85, 75], label: 'MarsVsSupp', stack: 'a'},
-    ];
+    this.logisticsMultiLabels = ['P1', 'P2', 'P3', 'P4', 'P5'];
   }
 
 }

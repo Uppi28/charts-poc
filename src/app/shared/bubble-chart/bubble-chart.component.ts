@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Color } from 'ng2-charts';
 
@@ -12,13 +12,13 @@ export class BubbleChartComponent implements OnInit {
   @Input() xLabel: string;
   @Input() yLabel: string;
   @Input() bubbleChartData: ChartDataSets[];
+  @Output() clicked = new EventEmitter<object>();
 
   constructor() { }
 
   public bubbleChartOptions: ChartOptions;
   public bubbleChartType: ChartType = 'bubble';
   public bubbleChartLegend = true;
-
   public bubbleChartColors: Color[] = [
     {
       backgroundColor: [
@@ -36,6 +36,10 @@ export class BubbleChartComponent implements OnInit {
     }
   ];
 
+  scatterClicked(event) {
+    this.clicked.emit({index: event.active[0]['_index'], color: event.active[0]['_options'].backgroundColor});
+  }
+
   ngOnInit() {
     this.bubbleChartOptions = {
       responsive: true,
@@ -52,15 +56,15 @@ export class BubbleChartComponent implements OnInit {
           }
         }],
         yAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: this.yLabel
-            },
-            ticks: {
-              min: 0,
-              max: 30,
-            }
-          }]
+          scaleLabel: {
+            display: true,
+            labelString: this.yLabel
+          },
+          ticks: {
+            min: 0,
+            max: 30,
+          }
+        }]
       }
     };
   }

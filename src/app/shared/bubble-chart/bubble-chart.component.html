@@ -5,6 +5,7 @@
         [options]="bubbleChartOptions" 
         [colors]="bubbleChartColors"
         [legend]="bubbleChartLegend" 
-        [chartType]="bubbleChartType">
+        [chartType]="bubbleChartType"
+        (chartClick)="scatterClicked($event)">
     </canvas>
 </div>

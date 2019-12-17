@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
-import { Label } from 'ng2-charts';
+import { Label, Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-commercial',
@@ -10,28 +10,33 @@ import { Label } from 'ng2-charts';
 export class CommercialComponent implements OnInit {
 
   constructor() { }
-  donutData
-  donutLabels
   bubbleData: ChartDataSets[];
 
-  xLabel: string = 'Composition';
-  yLabel: string = 'Cost(%)';
+  xLabel: string = 'Composition(%)';
+  yLabel: string = 'Cost($)';
   trendLineData: ChartDataSets[];
   trendLineLabels: Label[]
+  trendLineColor: string = 'red';
+
+  mockData: number[][] = [
+    [1,2,3,4,5,6],
+    [5,4,3,2,1,0],
+    [5,3,4,1,2,0],
+    [10,10,20,20,10,10]
+  ]
   
-  donutClicked(event) {
-    console.log(event);
+  scatterClicked(data) {
+    this.trendLineData[0].data = this.mockData[data.index]
   }
-  
 
   ngOnInit() {
     this.trendLineData = [
-      { data: [95, 29, 89, 15, 57, 5], label: 'XYZ' },
+      { 
+        data: [95, 29, 89, 15, 57, 5], label: 'Cost Trend',
+        backgroundColor: 'red'
+      }
     ];
-    this.trendLineLabels = ['January', 'February', 'March', 'April', 'May', 'June'];
-
-    this.donutData = [1,2,3,4,5];
-    this.donutLabels = ['Ing 1 ','Ing 2','Ing 3','Ing 4','Ing 5']
+    this.trendLineLabels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
 
     this.bubbleData = [
       {
@@ -41,11 +46,9 @@ export class CommercialComponent implements OnInit {
           { x: 24, y: 12, r: 23 },
           { x: 7, y: 8, r: 8 },
         ],
-        label: 'Series A',
+        label: 'Cost per Kilogram',
         backgroundColor: 'green',
-        borderColor: 'blue',
-        hoverBackgroundColor: 'purple',
-        hoverBorderColor: 'red',
+        borderColor: 'transparent'
       },
     ];
   }
