@@ -35,6 +35,7 @@ export class RndComponent implements OnInit {
 
   calcUpdatedCost() {
     this.updatedCost = Math.random()*10;
+    this.updatedCost = Number(this.updatedCost.toFixed(2));
   }
 
   donutClicked(data: { index: number}) {
