@@ -36,12 +36,18 @@ export class LineChartComponent implements OnInit{
           scaleLabel: {
             display: true,
             labelString: this.xLabel
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }],
         yAxes: [{
           scaleLabel: {
             display: true,
             labelString: this.yLabel
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }]
       },

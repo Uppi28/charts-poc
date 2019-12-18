@@ -51,6 +51,9 @@ export class BarChartComponent implements OnInit {
           scaleLabel: {
             display: true,
             labelString: this.xLabel
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }],
         yAxes: [{
@@ -60,6 +63,9 @@ export class BarChartComponent implements OnInit {
           },
           ticks: {
             beginAtZero: true
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }]
       },
