@@ -4,7 +4,7 @@
     float: left;
 }
 mat-card{
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 mat-card span{
     width: 10rem;

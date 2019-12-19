@@ -48,6 +48,9 @@ export class LineChartComponent implements OnInit{
           },
           gridLines: {
             drawOnChartArea: false
+          },
+          ticks: {
+            maxTicksLimit: 5
           }
         }]
       },

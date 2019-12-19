@@ -62,12 +62,14 @@ export class BarChartComponent implements OnInit {
             labelString: this.yLabel
           },
           ticks: {
-            beginAtZero: true
+            beginAtZero: true,
+            maxTicksLimit: 5
           },
           gridLines: {
             drawOnChartArea: false
           }
-        }]
+        }],
+        
       },
       elements: {
         line: {

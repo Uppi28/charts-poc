@@ -8,40 +8,58 @@
         </div>
         <div class="chartsWrapper">
             <mat-tab-group>
-                <mat-tab label="Sales" class="flex alignCenter justSB">
-                    <mat-card class="chartWrapper flex alignCenter justCenter">
-                        <app-bar-chart [chartName]="'ppSales'" [barData]="salesBarData" [barLabels]="[2015, 2016, 2017, 2018, 2019]"
-                            [xLabel]="'Years'" [yLabel]="'LSV($MM)'" [chartColor]="'#ffe29a'" (clicked)="barClicked($event)">
-                        </app-bar-chart>
-                    </mat-card>
+                <mat-tab label="Sales">
                     <div class="chartWrapper">
-                        <app-line-chart [lineData]="salesLineData" [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
-                            [yLabel]="'LSV($MM)'" width="100%" height="100%" [chartColor]="'#04a777'">
-                        </app-line-chart>
+                        <div class="paddingDiv">
+                            <app-bar-chart [chartName]="'ppSales'" [barData]="salesBarData"
+                                [barLabels]="[2015, 2016, 2017, 2018, 2019]" [xLabel]="'Years'" [yLabel]="'LSV($MM)'"
+                                [chartColor]="'#ffe29a'" (clicked)="barClicked($event)">
+                            </app-bar-chart>
+                        </div>
+                    </div>
+                    <div class="chartWrapper">
+                        <div class="paddingDiv">
+                            <app-line-chart [lineData]="salesLineData"
+                                [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
+                                [yLabel]="'LSV($MM)'" width="100%" height="100%" [chartColor]="'#04a777'">
+                            </app-line-chart>
+                        </div>
                     </div>
                 </mat-tab>
                 <mat-tab label="Volume">
                     <div class="chartWrapper">
-                        <app-bar-chart [chartName]="'ppVol'" [barData]="volBarData" [barLabels]="[2015, 2016, 2017, 2018, 2019]"
-                            [xLabel]="'Years'" [yLabel]="'Tonnes'" [chartColor]="'#f99eb5'" (clicked)="barClicked($event)">
-                        </app-bar-chart>
+                        <div class="paddingDiv">
+                            <app-bar-chart [chartName]="'ppVol'" [barData]="volBarData"
+                                [barLabels]="[2015, 2016, 2017, 2018, 2019]" [xLabel]="'Years'" [yLabel]="'Tonnes'"
+                                [chartColor]="'#f99eb5'" (clicked)="barClicked($event)">
+                            </app-bar-chart>
+                        </div>
                     </div>
                     <div class="chartWrapper">
-                        <app-line-chart [lineData]="volLineData" [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
-                            [yLabel]="'Tonnes'" width="100%" height="100%" [chartColor]="'#84a0d5'">
-                        </app-line-chart>
+                        <div class="paddingDiv">
+                            <app-line-chart [lineData]="volLineData" [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+                                [xLabel]="'Periods'" [yLabel]="'Tonnes'" width="100%" height="100%"
+                                [chartColor]="'#84a0d5'">
+                            </app-line-chart>
+                        </div>
                     </div>
                 </mat-tab>
                 <mat-tab label="COGS">
                     <div class="chartWrapper">
-                        <app-bar-chart [chartName]="'ppCogs'" [barData]="cogsBarData" [barLabels]="[2015, 2016, 2017, 2018, 2019]"
-                            [xLabel]="'Years'" [yLabel]="'$MM'" [chartColor]="'#f99eb5'" (clicked)="barClicked($event)">
-                        </app-bar-chart>
+                        <div class="paddingDiv">
+                            <app-bar-chart [chartName]="'ppCogs'" [barData]="cogsBarData"
+                                [barLabels]="[2015, 2016, 2017, 2018, 2019]" [xLabel]="'Years'" [yLabel]="'$MM'"
+                                [chartColor]="'#f99eb5'" (clicked)="barClicked($event)">
+                            </app-bar-chart>
+                        </div>
                     </div>
                     <div class="chartWrapper">
-                        <app-line-chart [lineData]="cogsLineData" [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
-                            [yLabel]="'$(MM)'" width="100%" height="100%" [chartColor]="'#04a777'">
-                        </app-line-chart>
+                        <div class="paddingDiv">
+                            <app-line-chart [lineData]="cogsLineData"
+                                [lineLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
+                                [yLabel]="'$(MM)'" width="100%" height="100%" [chartColor]="'#04a777'">
+                            </app-line-chart>
+                        </div>
                     </div>
                 </mat-tab>
             </mat-tab-group>
@@ -49,24 +67,32 @@
             <mat-tab-group>
                 <mat-tab label="Volume">
                     <div class="chartWrapper donutHolder">
-                        <app-doughnut-chart [donutData]="[1,2]" [donutLabels]="['Mars', 'Competitors']"
-                            (clicked)="dunutClicked($event)" [chartName]="'abc'"></app-doughnut-chart>
+                        <div class="paddingDiv">
+                            <app-doughnut-chart [donutData]="[1,2]" [donutLabels]="['Mars', 'Competitors']"
+                                (clicked)="dunutClicked($event)" [chartName]="'abc'"></app-doughnut-chart>
+                        </div>
                     </div>
                     <div class="chartWrapper multiChartHolder">
-                        <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
-                            [yLabel]="yLabel" [chartColor]="'#04A777'">
-                        </app-bar-chart>
+                        <div class="paddingDiv">
+                            <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+                                [xLabel]="'Periods'" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                            </app-bar-chart>
+                        </div>
                     </div>
                 </mat-tab>
                 <mat-tab label="Sales">
                     <div class="chartWrapper donutHolder">
-                        <app-doughnut-chart [donutData]="[1,2]" [donutLabels]="['Mars', 'Competitors']"
-                            (clicked)="dunutClicked($event)" [chartName]="'abc'"></app-doughnut-chart>
+                        <div class="paddingDiv">
+                            <app-doughnut-chart [donutData]="[1,2]" [donutLabels]="['Mars', 'Competitors']"
+                                (clicked)="dunutClicked($event)" [chartName]="'abc'"></app-doughnut-chart>
+                        </div>
                     </div>
                     <div class="chartWrapper multiChartHolder">
-                        <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']" [xLabel]="'Periods'"
-                            [yLabel]="yLabel" [chartColor]="'#04A777'">
-                        </app-bar-chart>
+                        <div class="paddingDiv">
+                            <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+                                [xLabel]="'Periods'" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                            </app-bar-chart>
+                        </div>
                     </div>
                 </mat-tab>
             </mat-tab-group>
