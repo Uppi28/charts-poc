@@ -8,12 +8,17 @@
         </div>
         <div class="chartsWrapper">
             <div class="chartWrapper" style="width: 100%;">
-                <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="bubbleData" (clicked)="scatterClicked($event)"></app-bubble-chart>
+                <div class="paddingDiv">
+                    <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="bubbleData"
+                        (clicked)="scatterClicked($event)"></app-bubble-chart>
+                </div>
             </div>
             <div class="chartWrapper" style="width: 100%;">
-                <app-line-chart [lineData]="trendLineData" [lineLabels]="trendLineLabels" [xLabel]="'Months'"
-                    [yLabel]="'Cost($)'" width="100%" height="100%" [chartColor]="trendLineColor">
-                </app-line-chart>
+                <div class="paddingDiv">
+                    <app-line-chart [lineData]="trendLineData" [lineLabels]="trendLineLabels" [xLabel]="'Months'"
+                        [yLabel]="'Cost($)'" width="100%" height="100%" [chartColor]="trendLineColor">
+                    </app-line-chart>
+                </div>
             </div>
         </div>
     </div>

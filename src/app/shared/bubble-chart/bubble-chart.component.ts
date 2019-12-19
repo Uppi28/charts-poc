@@ -52,7 +52,10 @@ export class BubbleChartComponent implements OnInit {
           },
           ticks: {
             min: 0,
-            max: 30,
+            max: 30
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }],
         yAxes: [{
@@ -63,6 +66,10 @@ export class BubbleChartComponent implements OnInit {
           ticks: {
             min: 0,
             max: 30,
+            maxTicksLimit: 5
+          },
+          gridLines: {
+            drawOnChartArea: false
           }
         }]
       }
