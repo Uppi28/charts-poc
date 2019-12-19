@@ -9,7 +9,7 @@
         <div class="chartsWrapper">
             <mat-tab-group>
                 <mat-tab label="Sales" class="flex alignCenter justSB">
-                    <mat-card class="chartWrapper">
+                    <mat-card class="chartWrapper flex alignCenter justCenter">
                         <app-bar-chart [chartName]="'ppSales'" [barData]="salesBarData" [barLabels]="[2015, 2016, 2017, 2018, 2019]"
                             [xLabel]="'Years'" [yLabel]="'LSV($MM)'" [chartColor]="'#ffe29a'" (clicked)="barClicked($event)">
                         </app-bar-chart>
