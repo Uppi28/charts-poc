@@ -1,4 +1,4 @@
-# [ChartsPOC](https://product-decision-engine.firebaseapp.com/home)
+# [Product Decision Engine](https://product-decision-engine.firebaseapp.com/home)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
