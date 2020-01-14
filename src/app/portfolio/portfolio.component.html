@@ -74,9 +74,13 @@
                     </div>
                     <div class="chartWrapper multiChartHolder">
                         <div class="paddingDiv">
-                            <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
-                                [xLabel]="'Periods'" [yLabel]="yLabel" [chartColor]="'#04A777'">
-                            </app-bar-chart>
+                            <div class="width100 flex alignCenter justCenter">MARS vs Market outperformance</div>
+                            <div style="height: 90%;">
+                                <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+                                    [xLabel]="'Periods'" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                                </app-bar-chart>
+                            </div>
+                            
                         </div>
                     </div>
                 </mat-tab>
@@ -89,6 +93,7 @@
                     </div>
                     <div class="chartWrapper multiChartHolder">
                         <div class="paddingDiv">
+                            <div class="width100">MARS vs Market outperformance</div>
                             <app-bar-chart [barData]="mktPerfBarData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
                                 [xLabel]="'Periods'" [yLabel]="yLabel" [chartColor]="'#04A777'">
                             </app-bar-chart>

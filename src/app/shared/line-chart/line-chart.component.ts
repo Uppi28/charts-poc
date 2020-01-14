@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 
@@ -26,6 +26,8 @@ export class LineChartComponent implements OnInit{
   lineChartLabels: Label[];
 
   ngOnInit() {
+    console.log(this.chartColor);
+    
     this.lineChartData = this.lineData;
     this.lineChartLabels = this.lineLabels;
     this.lineChartOptions = {
@@ -60,6 +62,8 @@ export class LineChartComponent implements OnInit{
         }
       }
     };
+
+
     this.lineChartColors = [
       { // red
         backgroundColor: this.chartColor,

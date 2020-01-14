@@ -68,9 +68,9 @@ export class PortfolioComponent implements OnInit {
       { data: [10, 34, 45, 3, 76, 40], label: 'PoP COGS' },
     ];
     this.mktPerfBarData = [
-      { data: [1, 3, 5, 3, 7, 0], label: 'PQR', type: 'line' },
-      { data: [2, -2, 6, -5, 7, 4], label: 'ABC', type: 'line' },
-      { data: [1, 3, -5, 2, 7, 4], label: 'PQR' },
+      { data: [1, 3, 5, 3, 7, 0], label: 'Growth% of Mars', type: 'line' },
+      { data: [2, -2, 6, -5, 7, 4], label: 'Growth % of rest of the market', type: 'line' },
+      { data: [1, 3, -5, 2, 7, 4], label: 'Difference between growth percentage' },
     ];
 
     this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June'];

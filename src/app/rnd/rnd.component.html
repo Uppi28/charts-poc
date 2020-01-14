@@ -20,7 +20,7 @@
                 <div class="chartWrapper" style="width: 100%;">
                     <div class="paddingDiv" style="width: 100%;">
                         <mat-card style="background: gray; color: white;">
-                            Alternate Ingredients' List <span> For: Ing {{altIngindex + 1}}</span>
+                            Alternate Ingredients' List <span> For: {{ selIng }}</span>
                         </mat-card>
                         <div style="height: 77%; overflow: auto;">
                             <div *ngFor="let alt of altIngs" style="overflow: auto; ">
@@ -36,7 +36,7 @@
                     <div style="height: 80%; overflow: auto;">
                         <mat-card class="alignCenter justSB" style="display: flex;"
                             *ngFor="let altIngs of altIngsAll; let i = index; trackBy: trackByIndex">
-                            <span>Ing {{i+1}} </span>
+                            <span>{{ donutLabels[i] }}</span>
                             <i class="material-icons">repeat</i>
                             <mat-form-field>
                                 <mat-label>Select alternate Ingredient</mat-label>

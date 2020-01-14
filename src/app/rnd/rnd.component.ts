@@ -10,27 +10,22 @@ import { Label } from 'ng2-charts';
 export class RndComponent implements OnInit {
 
   constructor() { }
-  ing1Data: ChartDataSets[];
-  ing1Label: Label[];
-  ing2Data: ChartDataSets[];
-  ing2Label: Label[];
-  priceCompData: ChartDataSets[];
-  priceCompLabel: Label[];
   donutData: number[];
   donutLabels: string[];
   xLabel: string;
   yLabel: string;
   selectedOptions: string[];
   altIngsAll = [
-    ['Alt11', 'Alt12', 'Alt13', 'Alt14'],
-    ['Alt21', 'Alt22', 'Alt23', 'Alt24'],
-    ['Alt31', 'Alt32', 'Alt33', 'Alt34'],
-    ['Alt41', 'Alt42', 'Alt43', 'Alt44'],
-    ['Alt51', 'Alt52', 'Alt53', 'Alt54']
+    ['Coconut Sugar', 'Monk Fruit Extract', 'Sucralose', 'Honey'],
+    ['Rosemary', 'Nutmeg', 'Basil', 'Chives'],
+    ['Tofu', 'JackFruit', 'Fish', 'Quinoa'],
+    ['Rice Milk', 'Help Milk', 'Soya Milk', 'Coconut Milk'],
+    ['Pea Protein', 'Egg Whites', 'Plant Blends', 'Brown Rice Extract']
   ]
   altIngs: string[] = this.altIngsAll[0];
   altIngindex: number = 0;
   updatedCost: number = 10;
+  selIng: string = ''
   
 
   calcUpdatedCost() {
@@ -39,6 +34,8 @@ export class RndComponent implements OnInit {
   }
 
   donutClicked(data: { index: number}) {
+    this.selIng = this.donutLabels[data.index];
+    
     this.altIngindex = data.index;
     this.altIngs = this.altIngsAll[data.index]
   }
@@ -48,31 +45,10 @@ export class RndComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ing1Data = [
-      { data: [85, 72, 78, 75, 77, 75], label: 'ABC' },
-      { data: [85, 72, 78, 75, 77, 75], label: 'XYZ', type: 'line'},
-    ];
-
-    this.ing1Label = ['January', 'February', 'March', 'April', 'May', 'June'];
-
-    this.ing2Data = [
-      { data: [35, 72, 48, 65, 70, 35], label: 'ABC' },
-      { data: [35, 72, 48, 65, 70, 35], label: 'XYZ', type: 'line'},
-    ];
-
-    this.ing2Label = ['January', 'February', 'March', 'April', 'May', 'June'];
-
-    this.priceCompData = [
-      { data: [35, 72], label: 'ABC' }
-    ];
-
-    this.priceCompLabel = ['Ing 1', 'Ing 2'];
-
-    this.xLabel = 'Months'
-    this.yLabel = 'Sales($MM)'
-
     this.donutData = [1,2,3,4,5];
-    this.donutLabels = ['Ing 1 ','Ing 2','Ing 3','Ing 4','Ing 5']
+    this.donutLabels = ['Sugar','Salt','Dry Chicken','Milk Powder','Protein Supplement']
+    this.selIng = this.donutLabels[0];
+
   }
 
 }

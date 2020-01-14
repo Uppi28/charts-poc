@@ -44,6 +44,14 @@ export class BubbleChartComponent implements OnInit {
     this.bubbleChartOptions = {
       responsive: true,
       maintainAspectRatio: false,
+      tooltips: {
+        callbacks: {
+          label: (item, data) => 
+          {
+            return 'Ingredient ' + item.index
+          }
+        }
+      },
       scales: {
         xAxes: [{
           scaleLabel: {
