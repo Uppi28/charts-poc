@@ -7,39 +7,39 @@
     </div>
     <div class="col-12" class="filterBody">
         <div class="filterSectionHolder">
-            <app-multi-select [data]='["Segment1", "Segment2", "Segment3", "Segment4", "Segment5", "Segment6"]'
+            <app-multi-select [data]="segmentData"
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Segment'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
-            <app-multi-select [data]='["RegionA", "RegionB", "RegionC", "RegionD", "RegionE", "RegionF"]'
+            <app-multi-select [data]='categoryData'
+                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
+                (optionSelected)="selectionDone($event)" [filterFor]="'Category'"></app-multi-select>
+        </div>
+        <div class="filterSectionHolder">
+            <app-multi-select [data]='regionData'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Region'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
-            <app-multi-select [data]='["PlantA", "PlantB", "PlantC", "PlantD", "PlantE", "PlantF"]'
+            <app-multi-select [data]='plantData'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Plant'">
             </app-multi-select>
         </div>
         <div class="filterSectionHolder">
-            <app-multi-select [data]='["CategoryA", "CategoryB", "CategoryC", "CategoryD", "CategoryE", "CategoryF"]'
-                [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
-                (optionSelected)="selectionDone($event)" [filterFor]="'Category'"></app-multi-select>
-        </div>
-        <div class="filterSectionHolder">
-            <app-multi-select [data]='["BrandA", "BrandB", "BrandC", "BrandD", "BrandE", "BrandF"]'
+            <app-multi-select [data]='brandData'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Brand'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
             <app-multi-select
-                [data]='["Pack Type A", "Pack Type B", "Pack Type C", "Pack Type D", "Pack Type E", "Pack Type F"]'
+                [data]='packTypeData'
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Pack Type'"></app-multi-select>
         </div>
         <div class="filterSectionHolder">
-            <app-multi-select [data]='["SKUA", "SKUB", "SKUC", "SKUD", "SKUE", "SKUF"]' [styles]="{'font-size': '1rem'}"
+            <app-multi-select [data]='skuData' [styles]="{'font-size': '1rem'}"
                 [index]="1" [allowAlias]="false" (optionSelected)="selectionDone($event)" [filterFor]="'SKU'">
             </app-multi-select>
         </div>
