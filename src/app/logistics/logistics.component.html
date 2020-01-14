@@ -9,9 +9,12 @@
         <div class="chartsWrapper flex alignCenter justCenter">
             <div class="chartWrapper multiChartHolder" style="width: 80%; height: 70%;">
                 <div class="paddingDiv">
-                    <app-bar-chart [barData]="logisticsMulti" [barLabels]="logisticsMultiLabels" [xLabel]="xLabel"
-                        [yLabel]="yLabel" [chartColor]="'#04A777'">
-                    </app-bar-chart>
+                    <div class="flex justCenter">Demand Coverage and Requirement graph</div>
+                    <div style="height: 90%;">
+                        <app-bar-chart [barData]="logisticsMulti" [barLabels]="logisticsMultiLabels" [xLabel]="xLabel"
+                            [yLabel]="yLabel" [chartColor]="'#04A777'">
+                        </app-bar-chart>                   
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,9 +4,3 @@ img{
 .routerTitle{
     padding: 2rem 0;
 }
-.routerImgWrapper:focus{
-    outline: 0
-}
-.routerImgWrapper{
-    cursor: pointer;
-}

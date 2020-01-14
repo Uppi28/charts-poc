@@ -20,6 +20,9 @@ html,body{
 .noMargin{
     margin: 0;
 }
+.padd1rem{
+    padding: 1rem;
+}
 .noPadding{
     padding: 0;
 }
@@ -106,5 +109,14 @@ html,body{
     height: 100%;
     float: left;
     position: fixed;
+}
+.routerImgWrapper:focus{
+    outline: 0
+}
+.routerImgWrapper{
+    cursor: pointer;
+}
+mat-card{
+    position: static!important;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

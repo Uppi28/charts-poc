@@ -19,7 +19,7 @@ export class RndComponent implements OnInit {
     ['Coconut Sugar', 'Monk Fruit Extract', 'Sucralose', 'Honey'],
     ['Rosemary', 'Nutmeg', 'Basil', 'Chives'],
     ['Tofu', 'JackFruit', 'Fish', 'Quinoa'],
-    ['Rice Milk', 'Help Milk', 'Soya Milk', 'Coconut Milk'],
+    ['Rice Milk', 'Hemp Milk', 'Soya Milk', 'Coconut Milk'],
     ['Pea Protein', 'Egg Whites', 'Plant Blends', 'Brown Rice Extract']
   ]
   altIngs: string[] = this.altIngsAll[0];

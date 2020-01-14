@@ -17,14 +17,14 @@ export class LogisticsComponent implements OnInit {
   
   ngOnInit() {
     this.logisticsMulti = [
-      { data: [250000, 270000, 264356, 274568, 273456], label: 'Demand Plan', type: 'line' },
-      { data: [0, 0, 150000, 0, 0], label: 'Physical', stack: 'a' },
-      { data: [0, 0, 53456, 0, 0], label: 'Safety Stock', stack: 'a' },
-      { data: [200000, 223456, 0, 0, 0], label: 'Churned Volume', stack: 'a' },
-      { data: [0, 0, 103456, 0, 0], label: 'In-Transit', stack: 'a' },
-      { data: [0, 0, 0, 287654, 273456], label: 'Planned Inventory', stack: 'a' },
+      { data: [55000, 57000, 56435, 57456, 58000, 53456, 57653, 59876], label: 'Demand Plan', type: 'line' },
+      { data: [0, 0, 0, 0, 0, 20000, 0, 0], label: 'Physical', stack: 'a' },
+      { data: [0, 0, 0, 0, 0, 10000, 0, 0], label: 'Safety Stock', stack: 'a' },
+      { data: [50000, 55345, 50005, 53456, 56540, 0, 0, 0], label: 'Churned Volume', stack: 'a' },
+      { data: [0, 0, 0, 0, 0, 20000, 0, 0], label: 'In-Transit', stack: 'a' },
+      { data: [0, 0, 0, 0, 0, 0, 58765, 57345], label: 'Planned Volume', stack: 'a' },
     ];
-    this.logisticsMultiLabels = ['P1', 'P2', 'P3', 'P4', 'P5'];
+    this.logisticsMultiLabels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8'];
   }
 
 }

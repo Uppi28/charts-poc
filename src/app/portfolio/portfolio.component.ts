@@ -50,22 +50,22 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.volBarData = [
-      { data: [25, 32, 68, 65, 57], label: 'YoY Volume' },
+      { data: [10, 13, 15, 18, 20], label: 'YoY Volume' },
     ];
     this.salesBarData = [
-      { data: [2, 50, 30, 5, 27], label: 'YoY LSV' },
+      { data: [10, 13, 15, 18, 20], label: 'YoY LSV' },
     ];
     this.cogsBarData = [
-      { data: [10, 34, 45, 3, 76], label: 'YoY COGS' },
+      { data: [10, 13, 15, 18, 20], label: 'YoY COGS' },
     ];
     this.volLineData = [
-      { data: [25, 32, 68, 65, 57, 45], label: 'PoP Volume' },
+      { data: [85, 32, 68, 65, 57, 20], label: 'PoP Volume' },
     ];
     this.salesLineData = [
-      { data: [2, 50, 30, 5, 27, 45], label: 'PoP LSV' },
+      { data: [50, 50, 30, 50, 27, 22], label: 'PoP LSV' },
     ];
     this.cogsLineData = [
-      { data: [10, 34, 45, 3, 76, 40], label: 'PoP COGS' },
+      { data: [80, 34, 45, 30, 76, 23], label: 'PoP COGS' },
     ];
     this.mktPerfBarData = [
       { data: [1, 3, 5, 3, 7, 0], label: 'Growth% of Mars', type: 'line' },
