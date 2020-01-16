@@ -27,7 +27,7 @@ export class CommercialComponent implements OnInit {
   
   scatterClicked(data) {
     console.log(data.color);
-    this.trendLineData[0].backgroundColor = data.color;
+    this.trendLineColor = data.color;
     this.trendLineData[0].data = this.mockData[data.index]
   }
 

@@ -37,6 +37,8 @@ export class BubbleChartComponent implements OnInit {
   ];
 
   scatterClicked(event) {
+    console.log(event);
+    
     this.clicked.emit({index: event.active[0]['_index'], color: event.active[0]['_options'].backgroundColor});
   }
 

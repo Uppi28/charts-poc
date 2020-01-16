@@ -26,8 +26,6 @@ export class LineChartComponent implements OnInit{
   lineChartLabels: Label[];
 
   ngOnInit() {
-    console.log(this.chartColor);
-    
     this.lineChartData = this.lineData;
     this.lineChartLabels = this.lineLabels;
     this.lineChartOptions = {
