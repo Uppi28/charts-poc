@@ -14,16 +14,17 @@ export class LineChartComponent implements OnInit{
   @Input() lineLabels: Label[];
   @Input() xLabel: string;
   @Input() yLabel: string;
-  @Input() chartColor: string;
+  @Input() chartColor: Color[];
 
-  lineChartOptions: ChartOptions;
-  lineChartColors: Color[];
+  public lineChartOptions: ChartOptions;
+  public lineChartColors: Color[];
 
-  lineChartLegend = true;
-  lineChartPlugins = [];
-  lineChartType = 'line';
-  lineChartData: ChartDataSets[];
-  lineChartLabels: Label[];
+  public lineChartLegend = true;
+  public lineChartPlugins = [];
+  public lineChartType = 'line';
+  public lineChartData: ChartDataSets[];
+  public lineChartLabels: Label[];
+  public lineChartColor: Color[];
 
   ngOnInit() {
     this.lineChartData = this.lineData;
@@ -63,14 +64,14 @@ export class LineChartComponent implements OnInit{
 
 
     this.lineChartColors = [
-      { // red
-        backgroundColor: this.chartColor,
-        borderColor: this.chartColor,
+      { // grey
+        backgroundColor: 'red',
+        borderColor: 'red',
         pointBackgroundColor: 'rgba(148,159,177,1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-      },
+      }
     ];
   }
 }

@@ -16,25 +16,25 @@ export class CommercialComponent implements OnInit {
   yLabel: string = 'Cost($)';
   trendLineData: ChartDataSets[];
   trendLineLabels: Label[]
-  trendLineColor: string = 'red';
+  trendLineColor: Color[] = [];
 
   mockData: number[][] = [
-    [1,2,3,4,5,6],
-    [5,4,3,2,1,0],
-    [5,3,4,1,2,0],
-    [10,10,20,20,10,10]
+    [1,2,3,2,5,1],
+    [0,6,2,3,1,5],
+    [3,4,5,1,2,0],
+    [4,1,2,5,1,2],
   ]
   
   scatterClicked(data) {
     console.log(data.color);
-    this.trendLineColor = data.color;
+    this.trendLineColor.slice()
     this.trendLineData[0].data = this.mockData[data.index]
   }
 
   ngOnInit() {
     this.trendLineData = [
       { 
-        data: [95, 29, 89, 15, 57, 5], label: 'Cost Trend',
+        data: [1,2,3,2,5,1], label: 'Cost Trend',
         backgroundColor: 'red'
       }
     ];

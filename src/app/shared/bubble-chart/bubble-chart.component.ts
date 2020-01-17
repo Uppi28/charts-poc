@@ -23,10 +23,8 @@ export class BubbleChartComponent implements OnInit {
     {
       backgroundColor: [
         'green',
-        'red',
         'blue',
         'purple',
-        'yellow',
         'brown',
         'magenta',
         'cyan',
