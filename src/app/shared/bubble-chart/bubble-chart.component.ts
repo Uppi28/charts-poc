@@ -19,25 +19,11 @@ export class BubbleChartComponent implements OnInit {
   public bubbleChartOptions: ChartOptions;
   public bubbleChartType: ChartType = 'bubble';
   public bubbleChartLegend = true;
-  public bubbleChartColors: Color[] = [
-    {
-      backgroundColor: [
-        'green',
-        'blue',
-        'purple',
-        'brown',
-        'magenta',
-        'cyan',
-        'orange',
-        'pink'
-      ]
-    }
-  ];
 
   scatterClicked(event) {
-    console.log(event);
-    
-    this.clicked.emit({index: event.active[0]['_index'], color: event.active[0]['_options'].backgroundColor});
+    if(event.active[0]['_datasetIndex']){
+      this.clicked.emit({index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
+    }    
   }
 
   ngOnInit() {
@@ -48,7 +34,7 @@ export class BubbleChartComponent implements OnInit {
         callbacks: {
           label: (item, data) => 
           {
-            return 'Ingredient ' + item.index
+            return data.datasets[item.datasetIndex].label
           }
         }
       },

@@ -17,7 +17,7 @@ export class LogisticsComponent implements OnInit {
   
   ngOnInit() {
     this.logisticsMulti = [
-      { data: [55000, 57000, 56435, 57456, 58000, 53456, 57653, 59876], label: 'Demand Plan', type: 'line' },
+      { data: [35000, 37000, 36435, 37456, 38000, 33456, 37653, 39876], label: 'Demand Plan', type: 'line' },
       { data: [0, 0, 0, 0, 0, 20000, 0, 0], label: 'Physical', stack: 'a' },
       { data: [0, 0, 0, 0, 0, 10000, 0, 0], label: 'Safety Stock', stack: 'a' },
       { data: [50000, 55345, 50005, 53456, 56540, 0, 0, 0], label: 'Churned Volume', stack: 'a' },
