@@ -20,6 +20,12 @@
                     </app-line-chart>
                 </div>
             </div>
+            <div class="chartWrapper" style="width: 50%;">
+                <div class="paddingDiv">
+                    <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppTrendData"
+                        (clicked)="scatterClicked($event)"></app-bubble-chart>
+                </div>
+            </div>
         </div>
     </div>
 </div>

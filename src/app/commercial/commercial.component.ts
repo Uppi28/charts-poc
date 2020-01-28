@@ -11,6 +11,7 @@ export class CommercialComponent implements OnInit {
 
   constructor() { }
   bubbleData: ChartDataSets[];
+  suppTrendData: ChartDataSets[];
 
   xLabel: string = 'Composition(%)';
   yLabel: string = 'Cost($)';
@@ -46,7 +47,7 @@ export class CommercialComponent implements OnInit {
       {
         label: "Sugar",
         data: [
-          { x: 5, y: 15.59, r: 30 }
+          { x: 5, y: 7, r: 10 }
         ],
         backgroundColor: '#ffa1b5',
         hoverBackgroundColor: '#ffa1b5'
@@ -54,7 +55,7 @@ export class CommercialComponent implements OnInit {
       {
         label: "Salt",
         data: [
-          { x: 13, y: 3, r: 20 }
+          { x: 13, y: 3, r: 10 }
         ],
         backgroundColor: '#86c7f3',
         hoverBackgroundColor: '#86c7f3'
@@ -78,7 +79,74 @@ export class CommercialComponent implements OnInit {
       {
         label: "Protein Supplement",
         data: [
-          { x: 0, y: 19, r: 14 }
+          { x: 1, y: 19, r: 14 }
+        ],
+        backgroundColor: '#93d9d9',
+        hoverBackgroundColor: '#93d9d9'
+      }
+    ]
+    this.suppTrendData = [
+      {
+        label: "Supplier 1",
+        data: [
+          { x: 1, y: 1, r: 5 },
+          { x: 2, y: 1, r: 10 },
+          { x: 3, y: 1, r: 10 },
+          { x: 4, y: 1, r: 5 },
+          { x: 5, y: 1, r: 10 },
+          { x: 6, y: 1, r: 5 }
+        ],
+        backgroundColor: '#ffa1b5',
+        hoverBackgroundColor: '#ffa1b5'
+      },
+      {
+        label: "Supplier 2",
+        data: [
+          { x: 1, y: 2, r: 5 },
+          { x: 2, y: 2, r: 10 },
+          { x: 3, y: 2, r: 10 },
+          { x: 4, y: 2, r: 5 },
+          { x: 5, y: 2, r: 10 },
+          { x: 6, y: 2, r: 5 }
+        ],
+        backgroundColor: '#86c7f3',
+        hoverBackgroundColor: '#86c7f3'
+      },
+      {
+        label: "Supplier 3",
+        data: [
+          { x: 1, y: 3, r: 5 },
+          { x: 2, y: 3, r: 10 },
+          { x: 3, y: 3, r: 10 },
+          { x: 4, y: 3, r: 5 },
+          { x: 5, y: 3, r: 10 },
+          { x: 6, y: 3, r: 5 }
+        ],
+        backgroundColor: '#ffe29a',
+        hoverBackgroundColor: '#ffe29a'
+      },
+      {
+        label: "Supplier 4",
+        data: [
+          { x: 1, y: 4, r: 5 },
+          { x: 2, y: 4, r: 10 },
+          { x: 3, y: 4, r: 10 },
+          { x: 4, y: 4, r: 5 },
+          { x: 5, y: 4, r: 10 },
+          { x: 6, y: 4, r: 5 }
+        ],
+        backgroundColor: '#f1f2f4',
+        hoverBackgroundColor: '#f1f2f4'
+      },
+      {
+        label: "Supplier 5",
+        data: [
+          { x: 1, y: 5, r: 5 },
+          { x: 2, y: 5, r: 10 },
+          { x: 3, y: 5, r: 10 },
+          { x: 4, y: 5, r: 5 },
+          { x: 5, y: 5, r: 10 },
+          { x: 6, y: 5, r: 5 }
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'

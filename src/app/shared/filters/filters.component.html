@@ -38,14 +38,12 @@
                 [styles]="{'font-size': '1rem'}" [index]="1" [allowAlias]="false"
                 (optionSelected)="selectionDone($event)" [filterFor]="'Pack Type'"></app-multi-select>
         </div>
-        <div class="filterSectionHolder" [hidden]="isCommercial">
-                {{isCommercial}}
+        <div class="filterSectionHolder" [hidden]="!isCommercial">
             <app-multi-select [data]='skuData' [styles]="{'font-size': '1rem'}"
                 [index]="1" [allowAlias]="false" (optionSelected)="selectionDone($event)" [filterFor]="'SKU'">
             </app-multi-select>
         </div>
         <div class="filterSectionHolder" [hidden]="isCommercial">
-            {{isCommercial}}
             <app-multi-select [data]='grdData' [styles]="{'font-size': '1rem'}"
                 [index]="1" [allowAlias]="false" (optionSelected)="selectionDone($event)" [filterFor]="'GRD'">
             </app-multi-select>
