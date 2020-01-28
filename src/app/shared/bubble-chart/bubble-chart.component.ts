@@ -21,9 +21,7 @@ export class BubbleChartComponent implements OnInit {
   public bubbleChartLegend = true;
 
   scatterClicked(event) {
-    if(event.active[0]['_datasetIndex']){
-      this.clicked.emit({index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
-    }    
+    this.clicked.emit({index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
   }
 
   ngOnInit() {

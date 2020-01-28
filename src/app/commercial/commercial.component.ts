@@ -27,6 +27,8 @@ export class CommercialComponent implements OnInit {
   ]
   
   scatterClicked(data) {
+    console.log(data);
+    
     this.trendLineColor.slice()
     this.trendLineData[0].data = this.mockData[data.index]
   }
@@ -44,7 +46,7 @@ export class CommercialComponent implements OnInit {
       {
         label: "Sugar",
         data: [
-          { x: 15, y: 15.59, r: 30 }
+          { x: 5, y: 15.59, r: 30 }
         ],
         backgroundColor: '#ffa1b5',
         hoverBackgroundColor: '#ffa1b5'

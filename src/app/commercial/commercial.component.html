@@ -1,19 +1,19 @@
 <div class="tabContentWrapper">
     <div class="noPadding filterWrapper">
-        <app-filters></app-filters>
+        <app-filters [view]="'comm'"></app-filters>
     </div>
     <div class="tabBody">
         <div class="tabTitle flex alignCenter justCenter">
             Commercials
         </div>
         <div class="chartsWrapper">
-            <div class="chartWrapper" style="width: 100%;">
+            <div class="chartWrapper" style="width: 50%;">
                 <div class="paddingDiv">
                     <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="bubbleData"
                         (clicked)="scatterClicked($event)"></app-bubble-chart>
                 </div>
             </div>
-            <div class="chartWrapper" style="width: 100%;">
+            <div class="chartWrapper" style="width: 50%;">
                 <div class="paddingDiv">
                     <app-line-chart [lineData]="trendLineData" [lineLabels]="trendLineLabels" [xLabel]="'Months'"
                         [yLabel]="'Cost($)'" width="100%" height="100%" [chartColor]="trendLineColor">
