@@ -13,6 +13,7 @@ export class BubbleChartComponent implements OnInit {
   @Input() yLabel: string;
   @Input() bubbleChartData: ChartDataSets[];
   @Output() clicked = new EventEmitter<object>();
+  @Input() bubbleName: string;
 
   constructor() { }
 
@@ -21,7 +22,11 @@ export class BubbleChartComponent implements OnInit {
   public bubbleChartLegend = true;
 
   scatterClicked(event) {
-    this.clicked.emit({index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
+    if(this.bubbleName === 'ingDist'){
+      this.clicked.emit({chartName: 'ingDist', index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
+    } else if(this.bubbleName === 'suppTrend') {
+      // this.clicked.emit({chartName: 'suppTrend', index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
+    }
   }
 
   ngOnInit() {
@@ -43,8 +48,9 @@ export class BubbleChartComponent implements OnInit {
             labelString: this.xLabel
           },
           ticks: {
-            min: 0,
-            max: 30
+            min: this.bubbleName === 'suppTrend' ? 1 : 0,
+            max: this.bubbleName === 'suppTrend' ? 6 : 30,
+            stepSize: this.bubbleName === 'suppTrend' ? 1 : 5
           },
           gridLines: {
             drawOnChartArea: false
@@ -52,16 +58,17 @@ export class BubbleChartComponent implements OnInit {
         }],
         yAxes: [{
           scaleLabel: {
-            display: true,
+            display: this.bubbleName === 'suppTrend' ? false : true,
             labelString: this.yLabel
           },
           ticks: {
             min: 0,
-            max: 30,
-            maxTicksLimit: 5
+            max: this.bubbleName === 'suppTrend' ? 6 : 30,
+            display: this.bubbleName === 'suppTrend' ? false : true,
           },
           gridLines: {
-            drawOnChartArea: false
+            drawOnChartArea: this.bubbleName === 'suppTrend' ? true : false,
+            // display: this.bubbleName === 'suppTrend' ? false : true,
           }
         }]
       }

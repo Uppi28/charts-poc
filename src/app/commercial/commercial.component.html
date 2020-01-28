@@ -9,8 +9,12 @@
         <div class="chartsWrapper">
             <div class="chartWrapper" style="width: 50%;">
                 <div class="paddingDiv">
-                    <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="bubbleData"
-                        (clicked)="scatterClicked($event)"></app-bubble-chart>
+                    <app-bubble-chart 
+                        [xLabel]="xLabel" 
+                        [yLabel]="yLabel" 
+                        [bubbleChartData]="bubbleData"
+                        (clicked)="scatterClicked($event)"
+                        [bubbleName]="'ingDist'"></app-bubble-chart>
                 </div>
             </div>
             <div class="chartWrapper" style="width: 50%;">
@@ -20,10 +24,24 @@
                     </app-line-chart>
                 </div>
             </div>
-            <div class="chartWrapper" style="width: 50%;">
+            <!-- <div class="chartWrapper" style="width: 50%;">
                 <div class="paddingDiv">
-                    <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppTrendData"
-                        (clicked)="scatterClicked($event)"></app-bubble-chart>
+                    <app-bubble-chart 
+                        [xLabel]="'TCI'" 
+                        [yLabel]="yLabel" 
+                        [bubbleChartData]="suppDistData"
+                        (clicked)="scatterClicked($event)"
+                        [bubbleName]="'suppDist'"></app-bubble-chart>
+                </div>
+            </div> -->
+            <div class="chartWrapper" style="width: 100%;">
+                <div class="paddingDiv">
+                    <app-bubble-chart 
+                        [xLabel]="suppTrendxLabel" 
+                        [yLabel]="yLabel" 
+                        [bubbleChartData]="suppTrendData"
+                        (clicked)="scatterClicked($event)"
+                        [bubbleName]="'suppTrend'"></app-bubble-chart>
                 </div>
             </div>
         </div>
