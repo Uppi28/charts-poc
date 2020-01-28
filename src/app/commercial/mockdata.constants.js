@@ -157,6 +157,19 @@ export const SUPP_TREND_DATA_1 = [
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
+    },
+    {
+        label: "Supplier 6",
+        data: [
+            { x: 1, y: 6, r: 6 },
+            { x: 2, y: 6, r: 6 },
+            { x: 3, y: 6, r: 7 },
+            { x: 4, y: 6, r: 6 },
+            { x: 5, y: 6, r: 9 },
+            { x: 6, y: 6, r: 5 }
+        ],
+        backgroundColor: '#8c564b',
+        hoverBackgroundColor: '#8c564b'
     }
 ]
 
@@ -225,6 +238,19 @@ export const SUPP_TREND_DATA_2 = [
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
+    },
+    {
+        label: "Supplier 6",
+        data: [
+            { x: 1, y: 6, r: 9 },
+            { x: 2, y: 6, r: 9 },
+            { x: 3, y: 6, r: 9 },
+            { x: 4, y: 6, r: 9 },
+            { x: 5, y: 6, r: 9 },
+            { x: 6, y: 6, r: 9 }
+        ],
+        backgroundColor: '#8c564b',
+        hoverBackgroundColor: '#8c564b'
     }
 ]
 
@@ -293,6 +319,19 @@ export const SUPP_TREND_DATA_3 = [
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
+    },
+    {
+        label: "Supplier 6",
+        data: [
+            { x: 1, y: 6, r: 5 },
+            { x: 2, y: 6, r: 6 },
+            { x: 3, y: 6, r: 7 },
+            { x: 4, y: 6, r: 8 },
+            { x: 5, y: 6, r: 9 },
+            { x: 6, y: 6, r: 5 }
+        ],
+        backgroundColor: '#8c564b',
+        hoverBackgroundColor: '#8c564b'
     }
 ]
 
@@ -361,6 +400,19 @@ export const SUPP_TREND_DATA_4 = [
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
+    },
+    {
+        label: "Supplier 6",
+        data: [
+            { x: 1, y: 6, r: 8 },
+            { x: 2, y: 6, r: 9 },
+            { x: 3, y: 6, r: 9 },
+            { x: 4, y: 6, r: 9 },
+            { x: 5, y: 6, r: 6 },
+            { x: 6, y: 6, r: 5 }
+        ],
+        backgroundColor: '#8c564b',
+        hoverBackgroundColor: '#8c564b'
     }
 ]
 
@@ -429,5 +481,18 @@ export const SUPP_TREND_DATA_5 = [
         ],
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
+    },
+    {
+        label: "Supplier 6",
+        data: [
+            { x: 1, y: 6, r: 9 },
+            { x: 2, y: 6, r: 7 },
+            { x: 3, y: 6, r: 6 },
+            { x: 4, y: 6, r: 8 },
+            { x: 5, y: 6, r: 6 },
+            { x: 6, y: 6, r: 7 }
+        ],
+        backgroundColor: '#8c564b',
+        hoverBackgroundColor: '#8c564b'
     }
 ]
