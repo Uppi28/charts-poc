@@ -8,7 +8,7 @@ import {
   SUPP_DIST_DATA_DRY_CHICKEN,
   SUPP_DIST_DATA_MILK_POWDER,
   SUPP_DIST_DATA_PROTEIN_SUPPLEMENT,
-  SUPP_TREND_DATA_1,
+    SUPP_TREND_DATA_1,
   SUPP_TREND_DATA_2,
   SUPP_TREND_DATA_3,
   SUPP_TREND_DATA_4,
@@ -110,21 +110,54 @@ export class CommercialComponent implements OnInit {
   suppDistClicked(params) {
     switch (this.selectedIng) {
       case 'SUGAR':
-        this.suppTrendData = SUPP_TREND_DATA_1
+        this.suppTrendData = [];
+        for(let i=0; i<SUPP_DIST_DATA_SUGAR.length; i++) {
+          for(let j=0; j<SUPP_TREND_DATA_1.length; j++) {
+            if((SUPP_DIST_DATA_SUGAR[params][i]) && (SUPP_DIST_DATA_SUGAR[params][i].label === SUPP_TREND_DATA_1[j].label)){
+              this.suppTrendData.push(SUPP_TREND_DATA_1[j])
+            }
+          }
+        }
         break;
       case 'SALT':
-        console.log(SUPP_TREND_DATA_2);
-        
-        this.suppTrendData = SUPP_TREND_DATA_2
+        this.suppTrendData = [];
+        for(let i=0; i<SUPP_DIST_DATA_SALT.length; i++) {
+          for(let j=0; j<SUPP_TREND_DATA_2.length; j++) {
+            if((SUPP_DIST_DATA_SALT[params][i]) && (SUPP_DIST_DATA_SALT[params][i].label === SUPP_TREND_DATA_2[j].label)){
+              this.suppTrendData.push(SUPP_TREND_DATA_2[j])
+            }
+          }
+        }
         break;
       case 'DRY CHICKEN':
-        this.suppTrendData = SUPP_TREND_DATA_3
+        this.suppTrendData = [];
+        for(let i=0; i<SUPP_DIST_DATA_DRY_CHICKEN.length; i++) {
+          for(let j=0; j<SUPP_TREND_DATA_3.length; j++) {
+            if((SUPP_DIST_DATA_DRY_CHICKEN[params][i]) && (SUPP_DIST_DATA_DRY_CHICKEN[params][i].label === SUPP_TREND_DATA_3[j].label)){
+              this.suppTrendData.push(SUPP_TREND_DATA_3[j])
+            }
+          }
+        }
         break;
       case 'MILK POWDER':
-        this.suppTrendData = SUPP_TREND_DATA_4
+        this.suppTrendData = [];
+        for(let i=0; i<SUPP_DIST_DATA_MILK_POWDER.length; i++) {
+          for(let j=0; j<SUPP_TREND_DATA_4.length; j++) {
+            if((SUPP_DIST_DATA_MILK_POWDER[params][i]) && (SUPP_DIST_DATA_MILK_POWDER[params][i].label === SUPP_TREND_DATA_4[j].label)){
+              this.suppTrendData.push(SUPP_TREND_DATA_4[j])
+            }
+          }
+        }
         break;
       case 'PROTEIN SUPPLEMENT':
-        this.suppTrendData = SUPP_TREND_DATA_5
+        this.suppTrendData = [];
+        for(let i=0; i<SUPP_DIST_DATA_PROTEIN_SUPPLEMENT.length; i++) {
+          for(let j=0; j<SUPP_TREND_DATA_5.length; j++) {
+            if((SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[params][i]) && (SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[params][i].label === SUPP_TREND_DATA_5[j].label)){
+              this.suppTrendData.push(SUPP_TREND_DATA_5[j])
+            }
+          }
+        }
         break;
 
       default:
