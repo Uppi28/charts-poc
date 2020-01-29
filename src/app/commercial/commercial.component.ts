@@ -3,7 +3,10 @@ import { ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import {
   BUBBLE_DATA,
-  SUPP_DIST_DATA,
+  SUPP_DIST_DATA_1,
+  SUPP_DIST_DATA_2,
+  SUPP_DIST_DATA_3,
+  SUPP_DIST_DATA_4,
   SUPP_TREND_DATA_1,
   SUPP_TREND_DATA_2,
   SUPP_TREND_DATA_3,
@@ -21,7 +24,10 @@ export class CommercialComponent implements OnInit {
   constructor() { }
   bubbleData: ChartDataSets[];
   suppTrendData: ChartDataSets[];
-  suppDistData: ChartDataSets[];
+  suppDistData1: ChartDataSets[];
+  suppDistData2: ChartDataSets[];
+  suppDistData3: ChartDataSets[];
+  suppDistData4: ChartDataSets[];
 
   xLabel: string = 'Composition(%)';
   suppTrendxLabel: string = 'Months';
@@ -82,7 +88,10 @@ export class CommercialComponent implements OnInit {
     this.trendLineLabels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
 
     this.bubbleData = BUBBLE_DATA;
-    this.suppDistData = SUPP_DIST_DATA;
+    this.suppDistData1 = SUPP_DIST_DATA_1;
+    this.suppDistData2 = SUPP_DIST_DATA_2;
+    this.suppDistData3 = SUPP_DIST_DATA_3;
+    this.suppDistData4 = SUPP_DIST_DATA_4;
     this.suppTrendData = SUPP_TREND_DATA_1;
   }
 

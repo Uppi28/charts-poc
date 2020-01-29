@@ -18,7 +18,7 @@ export class FiltersComponent implements OnInit {
   packTypeData: string[];
   skuData: string[];
   grdData: string[];
-  isCommercial: boolean;
+  islogistics: boolean;
 
   ngOnInit() {
     this.filtersOpen = false;
@@ -30,9 +30,7 @@ export class FiltersComponent implements OnInit {
     this.packTypeData = ["Litter", "C&T", "Can", "Dry", "Pouch", "Tray", "PRALINEN", "SEASONALS", "RIEGEL", "HEALTHY SNACKS RIEGEL"];
     this.skuData = ["CTSclp 5L Ultra RU", "CTSlit 10*2,5L RU", "CTSlit 10L DR RU", "CTSlit 3*5L RU", "DREAMIES  Chicken 6*60g", "DREAMIES Beef 10*30g", "DREAMIES Beef 12*140g", "DREAMIES Beef 6*60g", "Dreamies Beef Cheese 6*60g", "DREAMIES Cheese 10*30g", "Dreamies Cheese 12*140g", "DREAMIES Cheese 6*60g", "DREAMIES Chicken 10*30g", "DREAMIES Chicken 12*140g", "DREAMIES Chicken 6*60g", "Dreamies Chicken/Snck mouse 7*30g", "DREAMIES Duck 6*60g"]
     this.grdData = ["CTSclp 5L Ultra RU", "CTSlit 10*2,5L RU", "CTSlit 10L DR RU", "CTSlit 3*5L RU", "DREAMIES  Chicken 6*60g", "DREAMIES Beef 10*30g", "DREAMIES Beef 12*140g", "DREAMIES Beef 6*60g", "Dreamies Beef Cheese 6*60g", "DREAMIES Cheese 10*30g", "Dreamies Cheese 12*140g", "DREAMIES Cheese 6*60g", "DREAMIES Chicken 10*30g", "DREAMIES Chicken 12*140g", "DREAMIES Chicken 6*60g", "Dreamies Chicken/Snck mouse 7*30g", "DREAMIES Duck 6*60g"]
-    this.isCommercial = this.view === 'comm' ? true : false;
-    console.log(this.isCommercial);
-    
+    this.islogistics = this.view === 'log' ? true : false;
   }
 
   toggleFilters() {

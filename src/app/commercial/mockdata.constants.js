@@ -41,7 +41,7 @@ export const BUBBLE_DATA = [
     }
 ];
 
-export const SUPP_DIST_DATA = [
+export const SUPP_DIST_DATA_1 = [
     {
         label: "Supplier 1",
         data: [
@@ -49,7 +49,10 @@ export const SUPP_DIST_DATA = [
         ],
         backgroundColor: '#ffa1b5',
         hoverBackgroundColor: '#ffa1b5'
-    },
+    }
+]
+
+export const SUPP_DIST_DATA_2 = [
     {
         label: "Supplier 2",
         data: [
@@ -66,6 +69,9 @@ export const SUPP_DIST_DATA = [
         backgroundColor: '#ffe29a',
         hoverBackgroundColor: '#ffe29a'
     },
+]
+
+export const SUPP_DIST_DATA_3 = [
     {
         label: "Supplier 4",
         data: [
@@ -82,6 +88,9 @@ export const SUPP_DIST_DATA = [
         backgroundColor: '#93d9d9',
         hoverBackgroundColor: '#93d9d9'
     },
+]
+
+export const SUPP_DIST_DATA_4 = [
     {
         label: "Supplier 6",
         data: [

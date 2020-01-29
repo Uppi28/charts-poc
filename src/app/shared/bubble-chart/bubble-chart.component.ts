@@ -41,34 +41,39 @@ export class BubbleChartComponent implements OnInit {
           }
         }
       },
+      legend: {
+        display: this.bubbleName === 'suppDist' ? false: true
+      },
       scales: {
         xAxes: [{
           scaleLabel: {
-            display: true,
+            display: this.bubbleName === 'suppDist' ? false: true,
             labelString: this.xLabel
           },
           ticks: {
             min: this.bubbleName === 'suppTrend' ? 1 : 0,
             max: this.bubbleName === 'suppTrend' ? 6 : 30,
-            stepSize: this.bubbleName === 'suppTrend' ? 1 : 5
+            stepSize: this.bubbleName === 'suppTrend' ? 1 : 5,
+            display: this.bubbleName === 'suppDist' ? false: true,
           },
           gridLines: {
-            drawOnChartArea: false
+            drawOnChartArea: false,
+            display: this.bubbleName === 'suppDist' ? false: true,
           }
         }],
         yAxes: [{
           scaleLabel: {
-            display: this.bubbleName === 'suppTrend' ? false : true,
+            display: (this.bubbleName === 'suppTrend' || this.bubbleName === 'suppDist') ? false : true,
             labelString: this.yLabel
           },
           ticks: {
             min: 0,
             max: this.bubbleName === 'suppTrend' ? 6 : 30,
-            display: this.bubbleName === 'suppTrend' ? false : true,
+            display: (this.bubbleName === 'suppTrend' || this.bubbleName === 'suppDist') ? false : true,
           },
           gridLines: {
             drawOnChartArea: this.bubbleName === 'suppTrend' ? true : false,
-            // display: this.bubbleName === 'suppTrend' ? false : true,
+            display: this.bubbleName === 'suppDist' ? false: true,
           }
         }]
       }
