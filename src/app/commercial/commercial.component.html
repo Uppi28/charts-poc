@@ -29,25 +29,25 @@
                         <div class="chartWrapper" style="width: 50%;">
                             <button mat-raised-button class="paddingDiv" style="padding: 0;">
                                 <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppDistData1"
-                                    (clicked)="scatterClicked($event)" [bubbleName]="'suppDist'"></app-bubble-chart>
+                                    (click)="suppDistClicked(0)" [bubbleName]="'suppDist'"></app-bubble-chart>
                             </button>
                         </div>
                         <div class="chartWrapper" style="width: 50%;">
                             <button mat-raised-button class="paddingDiv" style="padding: 0;">
                                 <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppDistData2"
-                                    (clicked)="scatterClicked($event)" [bubbleName]="'suppDist'"></app-bubble-chart>
+                                    (click)="suppDistClicked(1)" [bubbleName]="'suppDist'"></app-bubble-chart>
                             </button>
                         </div>
                         <div class="chartWrapper" style="width: 50%;">
                             <button mat-raised-button class="paddingDiv" style="padding: 0;">
                                 <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppDistData3"
-                                    (clicked)="scatterClicked($event)" [bubbleName]="'suppDist'"></app-bubble-chart>
+                                    (click)="suppDistClicked(2)" [bubbleName]="'suppDist'"></app-bubble-chart>
                             </button>
                         </div>
                         <div class="chartWrapper" style="width: 50%;">
                             <button mat-raised-button class="paddingDiv" style="padding: 0;">
                                 <app-bubble-chart [xLabel]="xLabel" [yLabel]="yLabel" [bubbleChartData]="suppDistData4"
-                                    (clicked)="scatterClicked($event)" [bubbleName]="'suppDist'"></app-bubble-chart>
+                                    (click)="suppDistClicked(3)" [bubbleName]="'suppDist'"></app-bubble-chart>
                             </button>
                         </div>
                     </div>

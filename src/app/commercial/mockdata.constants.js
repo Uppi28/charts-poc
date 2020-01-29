@@ -41,64 +41,283 @@ export const BUBBLE_DATA = [
     }
 ];
 
-export const SUPP_DIST_DATA_1 = [
-    {
-        label: "Supplier 1",
-        data: [
-            { x: 1, y: 1, r: 10 }
-        ],
-        backgroundColor: '#ffa1b5',
-        hoverBackgroundColor: '#ffa1b5'
-    }
+export const SUPP_DIST_DATA_SUGAR = [
+    [
+        {
+            label: "Supplier 1",
+            data: [
+                { x: 1, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffa1b5',
+            hoverBackgroundColor: '#ffa1b5'
+        }
+    ],
+    [
+        {
+            label: "Supplier 2",
+            data: [
+                { x: 20, y: 20, r: 10 }
+            ],
+            backgroundColor: '#86c7f3',
+            hoverBackgroundColor: '#86c7f3'
+        },
+        {
+            label: "Supplier 3",
+            data: [
+                { x: 20, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffe29a',
+            hoverBackgroundColor: '#ffe29a'
+        }
+    ],
+    [
+        {
+            label: "Supplier 4",
+            data: [
+                { x: 1, y: 20, r: 10 }
+            ],
+            backgroundColor: '#f1f2f4',
+            hoverBackgroundColor: '#f1f2f4'
+        },
+        {
+            label: "Supplier 5",
+            data: [
+                { x: 20, y: 19, r: 10 }
+            ],
+            backgroundColor: '#93d9d9',
+            hoverBackgroundColor: '#93d9d9'
+        }
+    ],
+    [
+        {
+            label: "Supplier 6",
+            data: [
+                { x: 10, y: 19, r: 10 }
+            ],
+            backgroundColor: '#8c564b',
+            hoverBackgroundColor: '#8c564b'
+        }
+    ]
 ]
 
-export const SUPP_DIST_DATA_2 = [
-    {
-        label: "Supplier 2",
-        data: [
-            { x: 20, y: 20, r: 10 }
-        ],
-        backgroundColor: '#86c7f3',
-        hoverBackgroundColor: '#86c7f3'
-    },
-    {
-        label: "Supplier 3",
-        data: [
-            { x: 20, y: 1, r: 10 }
-        ],
-        backgroundColor: '#ffe29a',
-        hoverBackgroundColor: '#ffe29a'
-    },
+export const SUPP_DIST_DATA_SALT = [
+    [
+        {
+            label: "Supplier 2",
+            data: [
+                { x: 20, y: 20, r: 10 }
+            ],
+            backgroundColor: '#86c7f3',
+            hoverBackgroundColor: '#86c7f3'
+        },
+        {
+            label: "Supplier 3",
+            data: [
+                { x: 20, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffe29a',
+            hoverBackgroundColor: '#ffe29a'
+        }
+        
+    ],
+    [
+        {
+            label: "Supplier 1",
+            data: [
+                { x: 1, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffa1b5',
+            hoverBackgroundColor: '#ffa1b5'
+        }
+    ],
+    [
+        {
+            label: "Supplier 6",
+            data: [
+                { x: 10, y: 19, r: 10 }
+            ],
+            backgroundColor: '#8c564b',
+            hoverBackgroundColor: '#8c564b'
+        }
+    ],
+    [
+        {
+            label: "Supplier 4",
+            data: [
+                { x: 1, y: 20, r: 10 }
+            ],
+            backgroundColor: '#f1f2f4',
+            hoverBackgroundColor: '#f1f2f4'
+        },
+        {
+            label: "Supplier 5",
+            data: [
+                { x: 20, y: 19, r: 10 }
+            ],
+            backgroundColor: '#93d9d9',
+            hoverBackgroundColor: '#93d9d9'
+        }
+    ]
 ]
-
-export const SUPP_DIST_DATA_3 = [
-    {
-        label: "Supplier 4",
-        data: [
-            { x: 1, y: 20, r: 10 }
-        ],
-        backgroundColor: '#f1f2f4',
-        hoverBackgroundColor: '#f1f2f4'
-    },
-    {
-        label: "Supplier 5",
-        data: [
-            { x: 20, y: 19, r: 10 }
-        ],
-        backgroundColor: '#93d9d9',
-        hoverBackgroundColor: '#93d9d9'
-    },
+export const SUPP_DIST_DATA_DRY_CHICKEN = [
+    [
+        {
+            label: "Supplier 4",
+            data: [
+                { x: 1, y: 20, r: 10 }
+            ],
+            backgroundColor: '#f1f2f4',
+            hoverBackgroundColor: '#f1f2f4'
+        },
+        {
+            label: "Supplier 5",
+            data: [
+                { x: 20, y: 19, r: 10 }
+            ],
+            backgroundColor: '#93d9d9',
+            hoverBackgroundColor: '#93d9d9'
+        }
+    ],
+    [
+        {
+            label: "Supplier 2",
+            data: [
+                { x: 20, y: 20, r: 10 }
+            ],
+            backgroundColor: '#86c7f3',
+            hoverBackgroundColor: '#86c7f3'
+        },
+        {
+            label: "Supplier 3",
+            data: [
+                { x: 20, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffe29a',
+            hoverBackgroundColor: '#ffe29a'
+        }
+    ],
+    [
+        {
+            label: "Supplier 6",
+            data: [
+                { x: 10, y: 19, r: 10 }
+            ],
+            backgroundColor: '#8c564b',
+            hoverBackgroundColor: '#8c564b'
+        }
+    ],
+    [
+        {
+            label: "Supplier 1",
+            data: [
+                { x: 1, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffa1b5',
+            hoverBackgroundColor: '#ffa1b5'
+        }
+    ],
+    
 ]
+export const SUPP_DIST_DATA_MILK_POWDER = [
+    [
+        {
+            label: "Supplier 1",
+            data: [
+                { x: 1, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffa1b5',
+            hoverBackgroundColor: '#ffa1b5'
+        },
+        {
+            label: "Supplier 2",
+            data: [
+                { x: 20, y: 20, r: 10 }
+            ],
+            backgroundColor: '#86c7f3',
+            hoverBackgroundColor: '#86c7f3'
+        },
+        {
+            label: "Supplier 3",
+            data: [
+                { x: 20, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffe29a',
+            hoverBackgroundColor: '#ffe29a'
+        }
+    ],
+    [
+        
+    ],
+    [
+        {
+            label: "Supplier 4",
+            data: [
+                { x: 1, y: 20, r: 10 }
+            ],
+            backgroundColor: '#f1f2f4',
+            hoverBackgroundColor: '#f1f2f4'
+        },
+        {
+            label: "Supplier 5",
+            data: [
+                { x: 20, y: 19, r: 10 }
+            ],
+            backgroundColor: '#93d9d9',
+            hoverBackgroundColor: '#93d9d9'
+        }
+    ],
+    [
+        {
+            label: "Supplier 6",
+            data: [
+                { x: 10, y: 19, r: 10 }
+            ],
+            backgroundColor: '#8c564b',
+            hoverBackgroundColor: '#8c564b'
+        }
+    ]
+]
+export const SUPP_DIST_DATA_PROTEIN_SUPPLEMENT = [
+    [
+        {
+            label: "Supplier 1",
+            data: [
+                { x: 1, y: 1, r: 10 }
+            ],
+            backgroundColor: '#ffa1b5',
+            hoverBackgroundColor: '#ffa1b5'
+        }
+    ],[
 
-export const SUPP_DIST_DATA_4 = [
-    {
-        label: "Supplier 6",
-        data: [
-            { x: 10, y: 19, r: 10 }
-        ],
-        backgroundColor: '#8c564b',
-        hoverBackgroundColor: '#8c564b'
-    }
+    ],
+    [
+        {
+            label: "Supplier 4",
+            data: [
+                { x: 1, y: 20, r: 10 }
+            ],
+            backgroundColor: '#f1f2f4',
+            hoverBackgroundColor: '#f1f2f4'
+        },
+        {
+            label: "Supplier 5",
+            data: [
+                { x: 20, y: 19, r: 10 }
+            ],
+            backgroundColor: '#93d9d9',
+            hoverBackgroundColor: '#93d9d9'
+        }
+    ],
+    [
+        {
+            label: "Supplier 6",
+            data: [
+                { x: 10, y: 19, r: 10 }
+            ],
+            backgroundColor: '#8c564b',
+            hoverBackgroundColor: '#8c564b'
+        }
+    ]
 ]
 
 export const SUPP_TREND_DATA_1 = [

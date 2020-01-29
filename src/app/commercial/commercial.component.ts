@@ -3,10 +3,11 @@ import { ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import {
   BUBBLE_DATA,
-  SUPP_DIST_DATA_1,
-  SUPP_DIST_DATA_2,
-  SUPP_DIST_DATA_3,
-  SUPP_DIST_DATA_4,
+  SUPP_DIST_DATA_SUGAR,
+  SUPP_DIST_DATA_SALT,
+  SUPP_DIST_DATA_DRY_CHICKEN,
+  SUPP_DIST_DATA_MILK_POWDER,
+  SUPP_DIST_DATA_PROTEIN_SUPPLEMENT,
   SUPP_TREND_DATA_1,
   SUPP_TREND_DATA_2,
   SUPP_TREND_DATA_3,
@@ -35,6 +36,7 @@ export class CommercialComponent implements OnInit {
   trendLineData: ChartDataSets[];
   trendLineLabels: Label[]
   trendLineColor: Color[] = [];
+  selectedIng: string;
 
   mockData: number[][] = [
     [1, 2, 3, 2, 5, 1],
@@ -53,26 +55,78 @@ export class CommercialComponent implements OnInit {
   ]
 
   scatterClicked(params) {
-    console.log(params);
-    
     this.trendLineColor.slice()
     this.trendLineData[0].data = this.mockData[params.index]
     switch (params.index) {
       case 0:
+        this.suppDistData1 = SUPP_DIST_DATA_SUGAR[0]
+        this.suppDistData2 = SUPP_DIST_DATA_SUGAR[1]
+        this.suppDistData3 = SUPP_DIST_DATA_SUGAR[2]
+        this.suppDistData4 = SUPP_DIST_DATA_SUGAR[3]
         this.suppTrendData = SUPP_TREND_DATA_1
+        this.selectedIng = 'SUGAR'
         break;
       case 1:
+        this.suppDistData1 = SUPP_DIST_DATA_SALT[0]
+        this.suppDistData2 = SUPP_DIST_DATA_SALT[1]
+        this.suppDistData3 = SUPP_DIST_DATA_SALT[2]
+        this.suppDistData4 = SUPP_DIST_DATA_SALT[3]
         this.suppTrendData = SUPP_TREND_DATA_2
+        this.selectedIng = 'SALT'
+
         break;
       case 2:
+        this.suppDistData1 = SUPP_DIST_DATA_DRY_CHICKEN[0]
+        this.suppDistData2 = SUPP_DIST_DATA_DRY_CHICKEN[1]
+        this.suppDistData3 = SUPP_DIST_DATA_DRY_CHICKEN[2]
+        this.suppDistData4 = SUPP_DIST_DATA_DRY_CHICKEN[3]
         this.suppTrendData = SUPP_TREND_DATA_3
+        this.selectedIng = 'DRY CHICKEN'
+
         break;
       case 3:
+        this.suppDistData1 = SUPP_DIST_DATA_MILK_POWDER[0]
+        this.suppDistData2 = SUPP_DIST_DATA_MILK_POWDER[1]
+        this.suppDistData3 = SUPP_DIST_DATA_MILK_POWDER[2]
+        this.suppDistData4 = SUPP_DIST_DATA_MILK_POWDER[3]
         this.suppTrendData = SUPP_TREND_DATA_4
+        this.selectedIng = 'MILK POWDER'
+
         break;
       case 4:
+        this.suppDistData1 = SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[0]
+        this.suppDistData2 = SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[1]
+        this.suppDistData3 = SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[2]
+        this.suppDistData4 = SUPP_DIST_DATA_PROTEIN_SUPPLEMENT[3]
+        this.suppTrendData = SUPP_TREND_DATA_5
+        this.selectedIng = 'PROTEIN SUPPLEMENT'
+
+        break;
+      default:
+        break;
+    }
+  }
+
+  suppDistClicked(params) {
+    switch (this.selectedIng) {
+      case 'SUGAR':
+        this.suppTrendData = SUPP_TREND_DATA_1
+        break;
+      case 'SALT':
+        console.log(SUPP_TREND_DATA_2);
+        
+        this.suppTrendData = SUPP_TREND_DATA_2
+        break;
+      case 'DRY CHICKEN':
+        this.suppTrendData = SUPP_TREND_DATA_3
+        break;
+      case 'MILK POWDER':
+        this.suppTrendData = SUPP_TREND_DATA_4
+        break;
+      case 'PROTEIN SUPPLEMENT':
         this.suppTrendData = SUPP_TREND_DATA_5
         break;
+
       default:
         break;
     }
@@ -87,11 +141,12 @@ export class CommercialComponent implements OnInit {
     ];
     this.trendLineLabels = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
 
+    this.selectedIng = 'SUGAR'
     this.bubbleData = BUBBLE_DATA;
-    this.suppDistData1 = SUPP_DIST_DATA_1;
-    this.suppDistData2 = SUPP_DIST_DATA_2;
-    this.suppDistData3 = SUPP_DIST_DATA_3;
-    this.suppDistData4 = SUPP_DIST_DATA_4;
+    this.suppDistData1 = SUPP_DIST_DATA_SUGAR[0]
+    this.suppDistData2 = SUPP_DIST_DATA_SUGAR[1]
+    this.suppDistData3 = SUPP_DIST_DATA_SUGAR[2]
+    this.suppDistData4 = SUPP_DIST_DATA_SUGAR[3]
     this.suppTrendData = SUPP_TREND_DATA_1;
   }
 

@@ -24,8 +24,6 @@ export class BubbleChartComponent implements OnInit {
   scatterClicked(event) {
     if(this.bubbleName === 'ingDist'){
       this.clicked.emit({chartName: 'ingDist', index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
-    } else if(this.bubbleName === 'suppTrend') {
-      // this.clicked.emit({chartName: 'suppTrend', index: event.active[0]['_datasetIndex'], color: event.active[0]['_options'].backgroundColor});
     }
   }
 
