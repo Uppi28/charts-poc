@@ -24,7 +24,7 @@ export class FiltersComponent implements OnInit {
     this.filtersOpen = false;
     this.segmentData = ["MWC", "Petcare"];
     this.categoryData = ["Catcare", "Chocolate Confectionery", "Dogcare", "Gums", "Ice Cream"];
-    this.regionData = ["Russia"];
+    this.regionData = [ "US", "Russia", "Great Britain", "India"];
     this.plantData = ["RU31", "RU32", "RU33", "RU37", "RU38", "XX01", "XX02", "XX03", "XX04", "XX05", "XX06", "XX07", "XX08", "XX09", "XX10", "XX11", "XX12", "XX13", "XX14"];
     this.brandData = ["CATSAN", "DREAMIES", "KITEKAT", "NATURES TABLE", "PERFECT FIT", "SHEBA", "WHISKAS", "Mixed", "CESAR", "CHAPPI", "PEDIGREE", "AMICELLI", "BALISTO", "BE-KIND", "BOUNTY", "CELEBRATIONS", "DOVE", "M&M'S", "MALTESERS", "MARS", "MILKY WAY", "SNICKERS", "TWIX", "5", "AIRWAVES", "BIG RED", "DOUBLEMINT", "EXTRA", "HUBBA BUBBA", "JUICY FRUIT", "ORBIT", "WRIGLEY'S SPEARMINT"]
     this.packTypeData = ["Litter", "C&T", "Can", "Dry", "Pouch", "Tray", "PRALINEN", "SEASONALS", "RIEGEL", "HEALTHY SNACKS RIEGEL"];

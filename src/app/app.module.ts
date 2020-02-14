@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MultiSelectComponent } from './shared/multi-select/multi-select.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BubbleChartComponent } from './shared/bubble-chart/bubble-chart.component';
+import { SustainabilityComponent } from './sustainability/sustainability.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { BubbleChartComponent } from './shared/bubble-chart/bubble-chart.compone
     FiltersComponent,
     MultiSelectComponent,
     BubbleChartComponent,
+    SustainabilityComponent,
   ],
   imports: [
     BrowserModule,

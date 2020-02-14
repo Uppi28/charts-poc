@@ -1,0 +1,7 @@
+.overviewNos{
+    font-size: 3rem;
+}
+mat-card{
+    min-width: 20rem;
+    cursor: pointer;
+}

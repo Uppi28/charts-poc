@@ -6,6 +6,7 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { RndComponent } from './rnd/rnd.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LogisticsComponent } from './logistics/logistics.component';
+import { SustainabilityComponent } from './sustainability/sustainability.component';
 
 
 const appRoutes : Routes = [
@@ -15,7 +16,7 @@ const appRoutes : Routes = [
     {path: 'rnd', component: RndComponent},
     {path: 'portfolio', component: PortfolioComponent},
     {path: 'logistics', component: LogisticsComponent},
-
+    {path: 'sustainability', component: SustainabilityComponent},
 ]
 
 @NgModule({
