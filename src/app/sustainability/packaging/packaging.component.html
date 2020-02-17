@@ -1,0 +1,17 @@
+<div class="tabContentWrapper">
+    <div class="noPadding filterWrapper">
+        <app-filters [view]="'pp'"></app-filters>
+    </div>
+    <div class="tabBody">
+        <div class="tabTitle flex alignCenter justCenter">
+            Sustainability - Packaging View
+        </div>
+        <div class="chartsWrapper">
+            <div class="wtVsEprWrapper">
+                <app-bar-chart [barData]="wtVsEprData" [barLabels]="['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+                    [xLabel]="xLabel" [yLabel]="yLabel" [chartColor]="'#04A777'">
+                </app-bar-chart>
+            </div>
+        </div>
+    </div>
+</div>

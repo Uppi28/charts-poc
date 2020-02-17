@@ -24,6 +24,9 @@ import { MultiSelectComponent } from './shared/multi-select/multi-select.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BubbleChartComponent } from './shared/bubble-chart/bubble-chart.component';
 import { SustainabilityComponent } from './sustainability/sustainability.component';
+import { PackagingComponent } from './sustainability/packaging/packaging.component';
+import { RecyclabilityComponent } from './sustainability/recyclability/recyclability.component';
+import { EprComponent } from './sustainability/epr/epr.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
     MultiSelectComponent,
     BubbleChartComponent,
     SustainabilityComponent,
+    PackagingComponent,
+    RecyclabilityComponent,
+    EprComponent,
   ],
   imports: [
     BrowserModule,
